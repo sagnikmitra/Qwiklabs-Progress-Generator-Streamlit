@@ -12,6 +12,10 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 from sklearn.decomposition import PCA
 import matplotlib.pyplot as plt
+from bokeh.models.widgets import Button
+from bokeh.models import CustomJS
+from streamlit_bokeh_events import streamlit_bokeh_events
+from io import StringIO
 
 
 gc = pd.read_excel('gc.xlsx')
@@ -23,12 +27,65 @@ st.write("""
 """)
 flag = 0
 
+# copy_button = Button(label="Get Clipboard Data")
+# copy_button.js_on_event("button_click", CustomJS(code="""
+#     navigator.clipboard.readText().then(text => document.dispatchEvent(new CustomEvent("GET_TEXT", {detail: text})))
+#     """))
+# result = streamlit_bokeh_events(
+#     copy_button,
+#     events="GET_TEXT",
+#     key="get_text",
+#     refresh_on_update=False,
+#     override_height=75,
+#     debounce_time=0)
+
+# if result:
+#     if "GET_TEXT" in result:
+#         df = pd.read_csv(StringIO(result.get("GET_TEXT")))
+#         st.table(df)
+
 selected = st.sidebar.selectbox(
-    "Search By", ("Name", "Email", "Public Profile URL"))
-if selected == "Email":
+    "Search By", ("Default","Name", "Email", "Public Profile URL"))
+
+page_name = ['Name','Email','Public Profile URL']
+page = st.radio('Search By', page_name)
+
+if page == 'Name':
+    str = st.text_input('Enter You Qwiklabs Name')
+    for i in range(2, sheet.max_row+1):
+        if sheet.cell(row=i, column=1).value.lower() == str.lower():
+            st.write(f"## **Name:** {sheet.cell(row=i, column=1).value}")
+            st.write(f"## **Email Address:** {sheet.cell(row=i, column=2).value}")
+            st.write(f"## **Enrollment Status:** {sheet.cell(row=i, column=5).value}")
+            st.write("## **Qwiklabs Public URL:**")
+            st.write(sheet.cell(row=i, column=6).value)
+            st.write(f"## **No. Of Quests Completed:** {int(sheet.cell(row=i, column=7).value)}")
+            st.write(f"## **No. Of Skill Badges Completed:** {int(sheet.cell(row=i, column=8).value)}")
+            flag = flag + 1
+
+    if flag == 0:
+        st.write("No Search Found")
+
+if page == 'Email':
     str = st.text_input('Enter You Qwiklabs Email Id')
     for i in range(2, sheet.max_row+1):
         if sheet.cell(row=i, column=2).value.lower() == str.lower():
+            st.write(f"## **Name:** {sheet.cell(row=i, column=1).value}")
+            st.write(f"## **Email Address:** {sheet.cell(row=i, column=2).value}")
+            st.write(f"## **Enrollment Status:** {sheet.cell(row=i, column=5).value}")
+            st.write("## **Qwiklabs Public URL:**")
+            st.write(sheet.cell(row=i, column=6).value)
+            st.write(f"## **No. Of Quests Completed:** {int(sheet.cell(row=i, column=7).value)}")
+            st.write(f"## **No. Of Skill Badges Completed:** {int(sheet.cell(row=i, column=8).value)}")
+            flag = flag + 1
+
+    if flag == 0:
+        st.write("No Search Found")
+
+if page == 'Profile Profile URL':
+    str = st.text_input('Enter You Qwiklabs Public URL')
+    for i in range(2, sheet.max_row+1):
+        if sheet.cell(row=i, column=6).value.lower() == str.lower():
             st.write(f"## **Name:** {sheet.cell(row=i, column=1).value}")
             st.write(f"## **Email Address:** {sheet.cell(row=i, column=2).value}")
             st.write(f"## **Enrollment Status:** {sheet.cell(row=i, column=5).value}")
@@ -45,6 +102,22 @@ if selected == "Name":
     str = st.text_input('Enter You Qwiklabs Name')
     for i in range(2, sheet.max_row+1):
         if sheet.cell(row=i, column=1).value.lower() == str.lower():
+            st.write(f"## **Name:** {sheet.cell(row=i, column=1).value}")
+            st.write(f"## **Email Address:** {sheet.cell(row=i, column=2).value}")
+            st.write(f"## **Enrollment Status:** {sheet.cell(row=i, column=5).value}")
+            st.write("## **Qwiklabs Public URL:**")
+            st.write(sheet.cell(row=i, column=6).value)
+            st.write(f"## **No. Of Quests Completed:** {int(sheet.cell(row=i, column=7).value)}")
+            st.write(f"## **No. Of Skill Badges Completed:** {int(sheet.cell(row=i, column=8).value)}")
+            flag = flag + 1
+
+    if flag == 0:
+        st.write("No Search Found")
+
+if selected == "Email":
+    str = st.text_input('Enter You Qwiklabs Email Id')
+    for i in range(2, sheet.max_row+1):
+        if sheet.cell(row=i, column=2).value.lower() == str.lower():
             st.write(f"## **Name:** {sheet.cell(row=i, column=1).value}")
             st.write(f"## **Email Address:** {sheet.cell(row=i, column=2).value}")
             st.write(f"## **Enrollment Status:** {sheet.cell(row=i, column=5).value}")
