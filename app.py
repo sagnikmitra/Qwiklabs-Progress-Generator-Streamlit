@@ -89,7 +89,7 @@ if page == 'Name':
             flag = flag + 1
 
     if flag == 0:
-        st.write("No Search Found")
+        st.warning("No Search Found")
 
 if page == 'Email':
     str = st.text_input('Enter You Qwiklabs Email Id')
