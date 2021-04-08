@@ -16,16 +16,28 @@ gc = pd.read_excel('gc.xlsx')
 import openpyxl as pxl
 from openpyxl import load_workbook
 
-exp = pxl.load_workbook('bc_avg_ms_dat.xlsx')
+exp = pxl.load_workbook('gc.xlsx')
+sheet = exp['Sister Nivedita University, Kol']
 st.write("""
 # Check your Qwiklabs Progress
 """)
+
+str = st.text_input('Enter You Qwiklabs MailId')
+for i in range(2, sheet.max_row+1):
+    if sheet.cell(row=i, column=2).value == str:
+        st.write(sheet.cell(row=i, column=5).value)
+        st.write(sheet.cell(row=i, column=6).value)
+        st.write(sheet.cell(row=i, column=7).value)
+        st.write(sheet.cell(row=i, column=8).value)
+    # else:
+    #     st.write(f"## No Registrations have been done from {str}")
+
 dataset_name = st.sidebar.selectbox("Select Dataset",("Iris","Breast Cancer","Wine Dataset"))
 st.write(f"## Name of the Dataset: {dataset_name}")
 classifier_name = st.sidebar.selectbox("Select Classifier",("KNN","SVM","Random Forest"))
 
-def get_quests:
-    pass
+# def get_quests:
+#     pass
 
 def get_dataset(dataset_name):
     if dataset_name == "Iris":
