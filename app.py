@@ -3,14 +3,6 @@ import openpyxl as pxl
 import streamlit as st
 import numpy as np
 import pandas as pd
-import sklearn
-from sklearn import datasets
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.svm import SVC
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import accuracy_score
-from sklearn.decomposition import PCA
 import matplotlib.pyplot as plt
 from bokeh.models.widgets import Button
 from bokeh.models import CustomJS
