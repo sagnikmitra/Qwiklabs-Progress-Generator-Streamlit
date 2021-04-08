@@ -3,14 +3,6 @@ import openpyxl as pxl
 import streamlit as st
 import numpy as np
 import pandas as pd
-import sklearn
-from sklearn import datasets
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.svm import SVC
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import accuracy_score
-from sklearn.decomposition import PCA
 import matplotlib.pyplot as plt
 from bokeh.models.widgets import Button
 from bokeh.models import CustomJS
@@ -23,7 +15,8 @@ gc = pd.read_excel('gc.xlsx')
 exp = pxl.load_workbook('gc.xlsx')
 sheet = exp['Sister Nivedita University, Kol']
 st.write("""
-# Check your Qwiklabs Progress
+# Check your Qwiklabs Progress for GoogleCloudFacilitator Program 2021
+## Your Host: Sister Nivedita University
 """)
 flag = 0
 milestone1_quest = 8 
@@ -74,6 +67,7 @@ if page == 'Name':
             if (quest_difference_milestone_1 < 1) and (skill_badges_difference_milestone_1 < 1) :
                 st.write("## **Congratulations! You have completed the First Milestone! On a Streak!**")
             else:
+                st.warning("You have not completed any of the Milestones. Start completing the amazing quests and skill badges to Kickstart your cloud journey and receive exciting gifts")
                 st.write(f"### You are **{quest_difference_milestone_1} Quests** and **{skill_badges_difference_milestone_1} Skill Badges** Away to Complete the First Milestone")
             quest_difference_milestone_2 = (milestone2_quest - int(sheet.cell(row=i, column=7).value))
             skill_badges_difference_milestone_2 = (milestone2_skill_badges-int(sheet.cell(row=i, column=8).value))
@@ -89,7 +83,7 @@ if page == 'Name':
                 st.write(f"### You are **{quest_difference_milestone_3} Quests** and **{skill_badges_difference_milestone_3} Skill Badges** Away to Complete the Third Milestone")
             quest_difference_milestone_4 = (milestone4_quest - int(sheet.cell(row=i, column=7).value))
             skill_badges_difference_milestone_4 = (milestone4_skill_badges-int(sheet.cell(row=i, column=8).value))
-            if (quest_difference_milestone_1 < 1) and (skill_badges_difference_milestone_1 < 1) :
+            if (quest_difference_milestone_4 < 1) and (skill_badges_difference_milestone_4 < 1) :
                 st.write("## **Congratulations! You have completed the Ultimate Milestone!! True Legend!!**")
             else:
                 st.write(f"### You are **{quest_difference_milestone_4} Quests** and **{skill_badges_difference_milestone_4} Skill Badges** Away to Complete the Ultimate Milestone")
@@ -114,6 +108,7 @@ if page == 'Email':
             if (quest_difference_milestone_1 < 1) and (skill_badges_difference_milestone_1 < 1) :
                 st.write("## **Congratulations! You have completed the First Milestone! On a Streak!**")
             else:
+                st.warning("You have not completed any of the Milestones. Start completing the amazing quests and skill badges to Kickstart your cloud journey and receive exciting gifts")
                 st.write(f"### You are **{quest_difference_milestone_1} Quests** and **{skill_badges_difference_milestone_1} Skill Badges** Away to Complete the First Milestone")
             quest_difference_milestone_2 = (milestone2_quest - int(sheet.cell(row=i, column=7).value))
             skill_badges_difference_milestone_2 = (milestone2_skill_badges-int(sheet.cell(row=i, column=8).value))
@@ -129,7 +124,7 @@ if page == 'Email':
                 st.write(f"### You are **{quest_difference_milestone_3} Quests** and **{skill_badges_difference_milestone_3} Skill Badges** Away to Complete the Third Milestone")
             quest_difference_milestone_4 = (milestone4_quest - int(sheet.cell(row=i, column=7).value))
             skill_badges_difference_milestone_4 = (milestone4_skill_badges-int(sheet.cell(row=i, column=8).value))
-            if (quest_difference_milestone_1 < 1) and (skill_badges_difference_milestone_1 < 1) :
+            if (quest_difference_milestone_4 < 1) and (skill_badges_difference_milestone_4 < 1) :
                 st.write("## **Congratulations! You have completed the Ultimate Milestone!! True Legend!!**")
             else:
                 st.write(f"### You are **{quest_difference_milestone_4} Quests** and **{skill_badges_difference_milestone_4} Skill Badges** Away to Complete the Ultimate Milestone")
@@ -154,6 +149,7 @@ if page == 'Public Profile URL':
             if (quest_difference_milestone_1 < 1) and (skill_badges_difference_milestone_1 < 1) :
                 st.write("## **Congratulations! You have completed the First Milestone! On a Streak!**")
             else:
+                st.warning("You have not completed any of the Milestones. Start completing the amazing quests and skill badges to Kickstart your cloud journey and receive exciting gifts")
                 st.write(f"### You are **{quest_difference_milestone_1} Quests** and **{skill_badges_difference_milestone_1} Skill Badges** Away to Complete the First Milestone")
             quest_difference_milestone_2 = (milestone2_quest - int(sheet.cell(row=i, column=7).value))
             skill_badges_difference_milestone_2 = (milestone2_skill_badges-int(sheet.cell(row=i, column=8).value))
@@ -169,7 +165,7 @@ if page == 'Public Profile URL':
                 st.write(f"### You are **{quest_difference_milestone_3} Quests** and **{skill_badges_difference_milestone_3} Skill Badges** Away to Complete the Third Milestone")
             quest_difference_milestone_4 = (milestone4_quest - int(sheet.cell(row=i, column=7).value))
             skill_badges_difference_milestone_4 = (milestone4_skill_badges-int(sheet.cell(row=i, column=8).value))
-            if (quest_difference_milestone_1 < 1) and (skill_badges_difference_milestone_1 < 1) :
+            if (quest_difference_milestone_4 < 1) and (skill_badges_difference_milestone_4 < 1) :
                 st.write("## **Congratulations! You have completed the Ultimate Milestone!! True Legend!!**")
             else:
                 st.write(f"### You are **{quest_difference_milestone_4} Quests** and **{skill_badges_difference_milestone_4} Skill Badges** Away to Complete the Ultimate Milestone")
@@ -194,6 +190,7 @@ if selected == "Name":
             if (quest_difference_milestone_1 < 1) and (skill_badges_difference_milestone_1 < 1) :
                 st.write("## **Congratulations! You have completed the First Milestone! On a Streak!**")
             else:
+                st.warning("You have not completed any of the Milestones. Start completing the amazing quests and skill badges to Kickstart your cloud journey and receive exciting gifts")
                 st.write(f"### You are **{quest_difference_milestone_1} Quests** and **{skill_badges_difference_milestone_1} Skill Badges** Away to Complete the First Milestone")
             quest_difference_milestone_2 = (milestone2_quest - int(sheet.cell(row=i, column=7).value))
             skill_badges_difference_milestone_2 = (milestone2_skill_badges-int(sheet.cell(row=i, column=8).value))
@@ -209,7 +206,7 @@ if selected == "Name":
                 st.write(f"### You are **{quest_difference_milestone_3} Quests** and **{skill_badges_difference_milestone_3} Skill Badges** Away to Complete the Third Milestone")
             quest_difference_milestone_4 = (milestone4_quest - int(sheet.cell(row=i, column=7).value))
             skill_badges_difference_milestone_4 = (milestone4_skill_badges-int(sheet.cell(row=i, column=8).value))
-            if (quest_difference_milestone_1 < 1) and (skill_badges_difference_milestone_1 < 1) :
+            if (quest_difference_milestone_4 < 1) and (skill_badges_difference_milestone_4 < 1) :
                 st.write("## **Congratulations! You have completed the Ultimate Milestone!! True Legend!!**")
             else:
                 st.write(f"### You are **{quest_difference_milestone_4} Quests** and **{skill_badges_difference_milestone_4} Skill Badges** Away to Complete the Ultimate Milestone")
@@ -234,6 +231,7 @@ if selected == "Email":
             if (quest_difference_milestone_1 < 1) and (skill_badges_difference_milestone_1 < 1) :
                 st.write("## **Congratulations! You have completed the First Milestone! On a Streak!**")
             else:
+                st.warning("You have not completed any of the Milestones. Start completing the amazing quests and skill badges to Kickstart your cloud journey and receive exciting gifts")
                 st.write(f"### You are **{quest_difference_milestone_1} Quests** and **{skill_badges_difference_milestone_1} Skill Badges** Away to Complete the First Milestone")
             quest_difference_milestone_2 = (milestone2_quest - int(sheet.cell(row=i, column=7).value))
             skill_badges_difference_milestone_2 = (milestone2_skill_badges-int(sheet.cell(row=i, column=8).value))
@@ -249,7 +247,7 @@ if selected == "Email":
                 st.write(f"### You are **{quest_difference_milestone_3} Quests** and **{skill_badges_difference_milestone_3} Skill Badges** Away to Complete the Third Milestone")
             quest_difference_milestone_4 = (milestone4_quest - int(sheet.cell(row=i, column=7).value))
             skill_badges_difference_milestone_4 = (milestone4_skill_badges-int(sheet.cell(row=i, column=8).value))
-            if (quest_difference_milestone_1 < 1) and (skill_badges_difference_milestone_1 < 1) :
+            if (quest_difference_milestone_4 < 1) and (skill_badges_difference_milestone_4 < 1) :
                 st.write("## **Congratulations! You have completed the Ultimate Milestone!! True Legend!!**")
             else:
                 st.write(f"### You are **{quest_difference_milestone_4} Quests** and **{skill_badges_difference_milestone_4} Skill Badges** Away to Complete the Ultimate Milestone")
@@ -274,6 +272,7 @@ if selected == "Public Profile URL":
             if (quest_difference_milestone_1 < 1) and (skill_badges_difference_milestone_1 < 1) :
                 st.write("## **Congratulations! You have completed the First Milestone! On a Streak!**")
             else:
+                st.warning("You have not completed any of the Milestones. Start completing the amazing quests and skill badges to Kickstart your cloud journey and receive exciting gifts")
                 st.write(f"### You are **{quest_difference_milestone_1} Quests** and **{skill_badges_difference_milestone_1} Skill Badges** Away to Complete the First Milestone")
             quest_difference_milestone_2 = (milestone2_quest - int(sheet.cell(row=i, column=7).value))
             skill_badges_difference_milestone_2 = (milestone2_skill_badges-int(sheet.cell(row=i, column=8).value))
@@ -289,7 +288,7 @@ if selected == "Public Profile URL":
                 st.write(f"### You are **{quest_difference_milestone_3} Quests** and **{skill_badges_difference_milestone_3} Skill Badges** Away to Complete the Third Milestone")
             quest_difference_milestone_4 = (milestone4_quest - int(sheet.cell(row=i, column=7).value))
             skill_badges_difference_milestone_4 = (milestone4_skill_badges-int(sheet.cell(row=i, column=8).value))
-            if (quest_difference_milestone_1 < 1) and (skill_badges_difference_milestone_1 < 1) :
+            if (quest_difference_milestone_4 < 1) and (skill_badges_difference_milestone_4 < 1) :
                 st.write("## **Congratulations! You have completed the Ultimate Milestone!! True Legend!!**")
             else:
                 st.write(f"### You are **{quest_difference_milestone_4} Quests** and **{skill_badges_difference_milestone_4} Skill Badges** Away to Complete the Ultimate Milestone")
@@ -298,6 +297,8 @@ if selected == "Public Profile URL":
     if flag == 0:
         st.write("No Search Found")
 
+
+st.write("### Developed & Maintained by: **[Sagnik Mitra](https://linkedin.com/in/sagnikmitra/) & [Manish Kumar Barnwal](https://linkedin.com/in/imanishbarnwal/)**")
 
 # dataset_name = st.sidebar.selectbox("Select Dataset",("Iris","Breast Cancer","Wine Dataset"))
 # st.write(f"## Name of the Dataset: {dataset_name}")

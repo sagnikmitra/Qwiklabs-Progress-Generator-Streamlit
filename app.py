@@ -15,7 +15,9 @@ gc = pd.read_excel('gc.xlsx')
 exp = pxl.load_workbook('gc.xlsx')
 sheet = exp['Sister Nivedita University, Kol']
 st.write("""
-# Check your Qwiklabs Progress
+# Check your Qwiklabs Progress for GoogleCloudFacilitator Program 2021
+## Your Host: Sister Nivedita University
+## Developed by: Sagnik Mitra & Manish Kumar Barnwal
 """)
 flag = 0
 milestone1_quest = 8 
