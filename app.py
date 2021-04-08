@@ -27,9 +27,9 @@ selected = st.sidebar.selectbox("Search By",("Name","Email","Public Profile URL"
 if selected == "Email": 
     str = st.text_input('Enter You Qwiklabs Email Id')
     for i in range(2, sheet.max_row+1):
-        if sheet.cell(row=i, column=2).value == str:
-            st.write(f"Name: {sheet.cell(row=i, column=1).value}")
-            st.write(f"Email Adrress: {sheet.cell(row=i, column=2).value}")
+        if sheet.cell(row=i, column=2).value.lower() == str.lower():
+            st.write(f"## Name: {sheet.cell(row=i, column=1).value}")
+            st.write(f"## Email Address: {sheet.cell(row=i, column=2).value}")
             st.write(sheet.cell(row=i, column=5).value)
             st.write(sheet.cell(row=i, column=6).value)
             st.write(int(sheet.cell(row=i, column=7).value))
@@ -42,9 +42,9 @@ if selected == "Email":
 if selected == "Name": 
     str = st.text_input('Enter You Qwiklabs Name')
     for i in range(2, sheet.max_row+1):
-        if sheet.cell(row=i, column=1).value == str:
-            st.write(sheet.cell(row=i, column=1).value)
-            st.write(sheet.cell(row=i, column=2).value)
+        if sheet.cell(row=i, column=1).value.lower() == str.lower():
+            st.write(f"## Name: {sheet.cell(row=i, column=1).value}")
+            st.write(f"## Email Address: {sheet.cell(row=i, column=2).value}")
             st.write(sheet.cell(row=i, column=5).value)
             st.write(sheet.cell(row=i, column=6).value)
             st.write(int(sheet.cell(row=i, column=7).value))
@@ -57,9 +57,9 @@ if selected == "Name":
 if selected == "Public Profile URL": 
     str = st.text_input('Enter You Qwiklabs PublicUrl')
     for i in range(2, sheet.max_row+1):
-        if sheet.cell(row=i, column=6).value == str:
-            st.write(sheet.cell(row=i, column=1).value)
-            st.write(sheet.cell(row=i, column=2).value)
+        if sheet.cell(row=i, column=6).value.lower() == str.lower():
+            st.write(f"## Name: {sheet.cell(row=i, column=1).value}")
+            st.write(f"## Email Address: {sheet.cell(row=i, column=2).value}")
             st.write(sheet.cell(row=i, column=5).value)
             st.write(sheet.cell(row=i, column=6).value)
             st.write(int(sheet.cell(row=i, column=7).value))
