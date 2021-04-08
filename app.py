@@ -21,16 +21,20 @@ sheet = exp['Sister Nivedita University, Kol']
 st.write("""
 # Check your Qwiklabs Progress
 """)
-
+flag = 0
 str = st.text_input('Enter You Qwiklabs MailId')
 for i in range(2, sheet.max_row+1):
     if sheet.cell(row=i, column=2).value == str:
         st.write(sheet.cell(row=i, column=5).value)
         st.write(sheet.cell(row=i, column=6).value)
-        st.write(sheet.cell(row=i, column=7).value)
-        st.write(sheet.cell(row=i, column=8).value)
-    # else:
-    #     st.write(f"## No Registrations have been done from {str}")
+        st.write(int(sheet.cell(row=i, column=7).value))
+        st.write(int(sheet.cell(row=i, column=8).value))
+        flag = flag + 1
+
+if flag==0 :
+    st.write("No Search Found")
+
+
 
 dataset_name = st.sidebar.selectbox("Select Dataset",("Iris","Breast Cancer","Wine Dataset"))
 st.write(f"## Name of the Dataset: {dataset_name}")
