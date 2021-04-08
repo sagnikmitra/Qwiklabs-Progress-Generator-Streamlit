@@ -28,8 +28,8 @@ if selected == "Email":
     str = st.text_input('Enter You Qwiklabs Email Id')
     for i in range(2, sheet.max_row+1):
         if sheet.cell(row=i, column=2).value == str:
-            st.write(sheet.cell(row=i, column=1).value)
-            st.write(sheet.cell(row=i, column=2).value)
+            st.write(f"Name: {sheet.cell(row=i, column=1).value}")
+            st.write(f"Email Adrress: {sheet.cell(row=i, column=2).value}")
             st.write(sheet.cell(row=i, column=5).value)
             st.write(sheet.cell(row=i, column=6).value)
             st.write(int(sheet.cell(row=i, column=7).value))
