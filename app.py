@@ -1,3 +1,5 @@
+from openpyxl import load_workbook
+import openpyxl as pxl
 import streamlit as st
 import numpy as np
 import pandas as pd
@@ -13,8 +15,6 @@ import matplotlib.pyplot as plt
 
 
 gc = pd.read_excel('gc.xlsx')
-import openpyxl as pxl
-from openpyxl import load_workbook
 
 exp = pxl.load_workbook('gc.xlsx')
 sheet = exp['Sister Nivedita University, Kol']
@@ -23,23 +23,24 @@ st.write("""
 """)
 flag = 0
 
-selected = st.sidebar.selectbox("Search By",("Name","Email","Public Profile URL"))
-if selected == "Email": 
+selected = st.sidebar.selectbox(
+    "Search By", ("Name", "Email", "Public Profile URL"))
+if selected == "Email":
     str = st.text_input('Enter You Qwiklabs Email Id')
     for i in range(2, sheet.max_row+1):
         if sheet.cell(row=i, column=2).value.lower() == str.lower():
-            st.write(f"## Name: {sheet.cell(row=i, column=1).value}")
-            st.write(f"## Email Address: {sheet.cell(row=i, column=2).value}")
-            st.write(sheet.cell(row=i, column=5).value)
-            st.write(sheet.cell(row=i, column=6).value)
-            st.write(int(sheet.cell(row=i, column=7).value))
-            st.write(int(sheet.cell(row=i, column=8).value))
+            st.write(f"## **Name:** {sheet.cell(row=i, column=1).value}")
+            st.write(f"## **Email Address:** {sheet.cell(row=i, column=2).value}")
+            st.write(f"## **Enrollment Status:** {sheet.cell(row=i, column=5).value}")
+            st.write(f"## **Qwiklabs Public URL:** {sheet.cell(row=i, column=6).value}")
+            st.write(f"## **No. Of Quests Completed:** {int(sheet.cell(row=i, column=7).value)}")
+            st.write(f"## **No. Of Skill Badges Completed:** {int(sheet.cell(row=i, column=8).value)}")
             flag = flag + 1
 
-    if flag==0 :
+    if flag == 0:
         st.write("No Search Found")
 
-if selected == "Name": 
+if selected == "Name":
     str = st.text_input('Enter You Qwiklabs Name')
     for i in range(2, sheet.max_row+1):
         if sheet.cell(row=i, column=1).value.lower() == str.lower():
@@ -51,11 +52,11 @@ if selected == "Name":
             st.write(int(sheet.cell(row=i, column=8).value))
             flag = flag + 1
 
-    if flag==0 :
+    if flag == 0:
         st.write("No Search Found")
 
-if selected == "Public Profile URL": 
-    str = st.text_input('Enter You Qwiklabs PublicUrl')
+if selected == "Public Profile URL":
+    str = st.text_input('Enter You Qwiklabs Public URL')
     for i in range(2, sheet.max_row+1):
         if sheet.cell(row=i, column=6).value.lower() == str.lower():
             st.write(f"## Name: {sheet.cell(row=i, column=1).value}")
@@ -66,7 +67,7 @@ if selected == "Public Profile URL":
             st.write(int(sheet.cell(row=i, column=8).value))
             flag = flag + 1
 
-    if flag==0 :
+    if flag == 0:
         st.write("No Search Found")
 
 
