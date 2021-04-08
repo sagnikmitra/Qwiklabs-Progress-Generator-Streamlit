@@ -35,7 +35,6 @@ if flag==0 :
     st.write("No Search Found")
 
 
-
 dataset_name = st.sidebar.selectbox("Select Dataset",("Iris","Breast Cancer","Wine Dataset"))
 st.write(f"## Name of the Dataset: {dataset_name}")
 classifier_name = st.sidebar.selectbox("Select Classifier",("KNN","SVM","Random Forest"))
