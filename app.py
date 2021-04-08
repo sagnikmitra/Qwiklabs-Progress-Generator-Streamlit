@@ -22,7 +22,7 @@ st.write("""
 # Check your Qwiklabs Progress
 """)
 flag = 0
-str = st.text_input('Enter You Qwiklabs MailId')
+str = st.text_input('Enter You Qwiklabs Email Id')
 for i in range(2, sheet.max_row+1):
     if sheet.cell(row=i, column=2).value == str:
         st.write(sheet.cell(row=i, column=5).value)
