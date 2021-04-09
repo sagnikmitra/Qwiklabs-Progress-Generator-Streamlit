@@ -64,7 +64,7 @@ if page == 'Name':
             quest_difference_milestone_1 = (milestone1_quest - int(sheet.cell(row=i, column=7).value))
             skill_badges_difference_milestone_1 = (milestone1_skill_badges-int(sheet.cell(row=i, column=8).value))
             if (quest_difference_milestone_1 < 1) and (skill_badges_difference_milestone_1 < 1) :
-                st.write("## **Congratulations! You have completed the First Milestone! On a Streak!**")
+                st.write("## :fire: ```Congratulations! You have completed the First Milestone! On a Streak!``` :fire:")
             else:
                 st.warning("You have not completed any of the Milestones. Start completing the amazing quests and skill badges to Kickstart your cloud journey and receive exciting gifts")
                 st.write(f"### You are **{quest_difference_milestone_1} Quests** and **{skill_badges_difference_milestone_1} Skill Badges** Away to Complete the First Milestone")
@@ -105,7 +105,7 @@ if page == 'Email':
             quest_difference_milestone_1 = (milestone1_quest - int(sheet.cell(row=i, column=7).value))
             skill_badges_difference_milestone_1 = (milestone1_skill_badges-int(sheet.cell(row=i, column=8).value))
             if (quest_difference_milestone_1 < 1) and (skill_badges_difference_milestone_1 < 1) :
-                st.write("## **Congratulations! You have completed the First Milestone! On a Streak!**")
+                st.write("## :fire: ```Congratulations! You have completed the First Milestone! On a Streak!``` :fire:")
             else:
                 st.warning("You have not completed any of the Milestones. Start completing the amazing quests and skill badges to Kickstart your cloud journey and receive exciting gifts")
                 st.write(f"### You are **{quest_difference_milestone_1} Quests** and **{skill_badges_difference_milestone_1} Skill Badges** Away to Complete the First Milestone")
@@ -146,7 +146,7 @@ if page == 'Public Profile URL':
             quest_difference_milestone_1 = (milestone1_quest - int(sheet.cell(row=i, column=7).value))
             skill_badges_difference_milestone_1 = (milestone1_skill_badges-int(sheet.cell(row=i, column=8).value))
             if (quest_difference_milestone_1 < 1) and (skill_badges_difference_milestone_1 < 1) :
-                st.write("## **Congratulations! You have completed the First Milestone! On a Streak!**")
+                st.write("## :fire: ```Congratulations! You have completed the First Milestone! On a Streak!``` :fire:")
             else:
                 st.warning("You have not completed any of the Milestones. Start completing the amazing quests and skill badges to Kickstart your cloud journey and receive exciting gifts")
                 st.write(f"### You are **{quest_difference_milestone_1} Quests** and **{skill_badges_difference_milestone_1} Skill Badges** Away to Complete the First Milestone")
@@ -187,7 +187,7 @@ if selected == "Name":
             quest_difference_milestone_1 = (milestone1_quest - int(sheet.cell(row=i, column=7).value))
             skill_badges_difference_milestone_1 = (milestone1_skill_badges-int(sheet.cell(row=i, column=8).value))
             if (quest_difference_milestone_1 < 1) and (skill_badges_difference_milestone_1 < 1) :
-                st.write("## **Congratulations! You have completed the First Milestone! On a Streak!**")
+                st.write("## :fire: ```Congratulations! You have completed the First Milestone! On a Streak!``` :fire:")
             else:
                 st.warning("You have not completed any of the Milestones. Start completing the amazing quests and skill badges to Kickstart your cloud journey and receive exciting gifts")
                 st.write(f"### You are **{quest_difference_milestone_1} Quests** and **{skill_badges_difference_milestone_1} Skill Badges** Away to Complete the First Milestone")
@@ -228,7 +228,7 @@ if selected == "Email":
             quest_difference_milestone_1 = (milestone1_quest - int(sheet.cell(row=i, column=7).value))
             skill_badges_difference_milestone_1 = (milestone1_skill_badges-int(sheet.cell(row=i, column=8).value))
             if (quest_difference_milestone_1 < 1) and (skill_badges_difference_milestone_1 < 1) :
-                st.write("## **Congratulations! You have completed the First Milestone! On a Streak!**")
+                st.write("## :fire: ```Congratulations! You have completed the First Milestone! On a Streak!``` :fire: :star_struck:")
             else:
                 st.warning("You have not completed any of the Milestones. Start completing the amazing quests and skill badges to Kickstart your cloud journey and receive exciting gifts")
                 st.write(f"### You are **{quest_difference_milestone_1} Quests** and **{skill_badges_difference_milestone_1} Skill Badges** Away to Complete the First Milestone")
@@ -269,7 +269,7 @@ if selected == "Public Profile URL":
             quest_difference_milestone_1 = (milestone1_quest - int(sheet.cell(row=i, column=7).value))
             skill_badges_difference_milestone_1 = (milestone1_skill_badges-int(sheet.cell(row=i, column=8).value))
             if (quest_difference_milestone_1 < 1) and (skill_badges_difference_milestone_1 < 1) :
-                st.write("## **Congratulations! You have completed the First Milestone! On a Streak!**")
+                st.write("## :fire: ```Congratulations! You have completed the First Milestone! On a Streak!``` :fire:")
             else:
                 st.warning("You have not completed any of the Milestones. Start completing the amazing quests and skill badges to Kickstart your cloud journey and receive exciting gifts")
                 st.write(f"### You are **{quest_difference_milestone_1} Quests** and **{skill_badges_difference_milestone_1} Skill Badges** Away to Complete the First Milestone")
@@ -296,8 +296,12 @@ if selected == "Public Profile URL":
     if flag == 0:
         st.write("No Search Found")
 
-
-st.write("### Developed & Maintained by: **[Sagnik Mitra](https://linkedin.com/in/sagnikmitra/) & [Manish Kumar Barnwal](https://linkedin.com/in/imanishbarnwal/)**")
+st.write(" ")
+st.write(" ")
+st.write(" ")
+st.write(" ")
+st.write(" ")
+st.write("#### Developed & Maintained by: **[Sagnik Mitra](https://linkedin.com/in/sagnikmitra/) & [Manish Kumar Barnwal](https://linkedin.com/in/imanishbarnwal/)** with :heart:")
 
 # dataset_name = st.sidebar.selectbox("Select Dataset",("Iris","Breast Cancer","Wine Dataset"))
 # st.write(f"## Name of the Dataset: {dataset_name}")
