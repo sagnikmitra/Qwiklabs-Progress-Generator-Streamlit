@@ -145,7 +145,7 @@ if page == 'Public Profile URL':
             st.write(f"## **No. Of Skill Badges Completed:** {int(sheet.cell(row=i, column=8).value)}")
             quest_difference_milestone_1 = (milestone1_quest - int(sheet.cell(row=i, column=7).value))
             skill_badges_difference_milestone_1 = (milestone1_skill_badges-int(sheet.cell(row=i, column=8).value))
-            if (quest_difference_milestone_1 < 1) and (skill_badges_difference_milestone_1 < 1) :jj
+            if (quest_difference_milestone_1 < 1) and (skill_badges_difference_milestone_1 < 1) :
                 st.write("## **Congratulations! You have completed the First Milestone! On a Streak!**")
             else:
                 st.warning("You have not completed any of the Milestones. Start completing the amazing quests and skill badges to Kickstart your cloud journey and receive exciting gifts")
