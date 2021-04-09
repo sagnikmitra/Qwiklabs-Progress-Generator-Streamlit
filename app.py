@@ -71,19 +71,19 @@ if page == 'Name':
             quest_difference_milestone_2 = (milestone2_quest - int(sheet.cell(row=i, column=7).value))
             skill_badges_difference_milestone_2 = (milestone2_skill_badges-int(sheet.cell(row=i, column=8).value))
             if (quest_difference_milestone_2 < 1) and (skill_badges_difference_milestone_2 < 1) :
-                st.write("## **Congratulations! You have completed the Second Milestone! On Fire!**")
+                st.write("## ```Congratulations! You have completed the Second Milestone! On Fire!``` :boom:")
             else:
                 st.write(f"### You are **{quest_difference_milestone_2} Quests** and **{skill_badges_difference_milestone_2} Skill Badges** Away to Complete the Second Milestone")
             quest_difference_milestone_3 = (milestone3_quest - int(sheet.cell(row=i, column=7).value))
             skill_badges_difference_milestone_3 = (milestone3_skill_badges-int(sheet.cell(row=i, column=8).value))
             if (quest_difference_milestone_3 < 1) and (skill_badges_difference_milestone_3 < 1) :
-                st.write("## **Congratulations! You have completed the Third Milestone! Unstoppable!**")
+                st.write("## ```Congratulations! You have completed the Third Milestone! Unstoppable!``` :star2:")
             else:
                 st.write(f"### You are **{quest_difference_milestone_3} Quests** and **{skill_badges_difference_milestone_3} Skill Badges** Away to Complete the Third Milestone")
             quest_difference_milestone_4 = (milestone4_quest - int(sheet.cell(row=i, column=7).value))
             skill_badges_difference_milestone_4 = (milestone4_skill_badges-int(sheet.cell(row=i, column=8).value))
             if (quest_difference_milestone_4 < 1) and (skill_badges_difference_milestone_4 < 1) :
-                st.write("## **Congratulations! You have completed the Ultimate Milestone!! True Legend!!**")
+                st.write("## ```Congratulations! You have completed the Ultimate Milestone!! True Legend!!``` :heart_eyes:")
             else:
                 st.write(f"### You are **{quest_difference_milestone_4} Quests** and **{skill_badges_difference_milestone_4} Skill Badges** Away to Complete the Ultimate Milestone")
             flag = flag + 1
@@ -112,19 +112,19 @@ if page == 'Email':
             quest_difference_milestone_2 = (milestone2_quest - int(sheet.cell(row=i, column=7).value))
             skill_badges_difference_milestone_2 = (milestone2_skill_badges-int(sheet.cell(row=i, column=8).value))
             if (quest_difference_milestone_2 < 1) and (skill_badges_difference_milestone_2 < 1) :
-                st.write("## **Congratulations! You have completed the Second Milestone! On Fire!**")
+                st.write("## ```Congratulations! You have completed the Second Milestone! On Fire!``` :boom:")
             else:
                 st.write(f"### You are **{quest_difference_milestone_2} Quests** and **{skill_badges_difference_milestone_2} Skill Badges** Away to Complete the Second Milestone")
             quest_difference_milestone_3 = (milestone3_quest - int(sheet.cell(row=i, column=7).value))
             skill_badges_difference_milestone_3 = (milestone3_skill_badges-int(sheet.cell(row=i, column=8).value))
             if (quest_difference_milestone_3 < 1) and (skill_badges_difference_milestone_3 < 1) :
-                st.write("## **Congratulations! You have completed the Third Milestone! Unstoppable!**")
+                st.write("## ```Congratulations! You have completed the Third Milestone! Unstoppable!``` :star2:")
             else:
                 st.write(f"### You are **{quest_difference_milestone_3} Quests** and **{skill_badges_difference_milestone_3} Skill Badges** Away to Complete the Third Milestone")
             quest_difference_milestone_4 = (milestone4_quest - int(sheet.cell(row=i, column=7).value))
             skill_badges_difference_milestone_4 = (milestone4_skill_badges-int(sheet.cell(row=i, column=8).value))
             if (quest_difference_milestone_4 < 1) and (skill_badges_difference_milestone_4 < 1) :
-                st.write("## **Congratulations! You have completed the Ultimate Milestone!! True Legend!!**")
+                st.write("## ```Congratulations! You have completed the Ultimate Milestone!! True Legend!!``` :heart_eyes:")
             else:
                 st.write(f"### You are **{quest_difference_milestone_4} Quests** and **{skill_badges_difference_milestone_4} Skill Badges** Away to Complete the Ultimate Milestone")
             flag = flag + 1
@@ -153,19 +153,19 @@ if page == 'Public Profile URL':
             quest_difference_milestone_2 = (milestone2_quest - int(sheet.cell(row=i, column=7).value))
             skill_badges_difference_milestone_2 = (milestone2_skill_badges-int(sheet.cell(row=i, column=8).value))
             if (quest_difference_milestone_2 < 1) and (skill_badges_difference_milestone_2 < 1) :
-                st.write("## **Congratulations! You have completed the Second Milestone! On Fire!**")
+                st.write("## ```Congratulations! You have completed the Second Milestone! On Fire!``` :boom:")
             else:
                 st.write(f"### You are **{quest_difference_milestone_2} Quests** and **{skill_badges_difference_milestone_2} Skill Badges** Away to Complete the Second Milestone")
             quest_difference_milestone_3 = (milestone3_quest - int(sheet.cell(row=i, column=7).value))
             skill_badges_difference_milestone_3 = (milestone3_skill_badges-int(sheet.cell(row=i, column=8).value))
             if (quest_difference_milestone_3 < 1) and (skill_badges_difference_milestone_3 < 1) :
-                st.write("## **Congratulations! You have completed the Third Milestone! Unstoppable!**")
+                st.write("## ```Congratulations! You have completed the Third Milestone! Unstoppable!``` :star2:")
             else:
                 st.write(f"### You are **{quest_difference_milestone_3} Quests** and **{skill_badges_difference_milestone_3} Skill Badges** Away to Complete the Third Milestone")
             quest_difference_milestone_4 = (milestone4_quest - int(sheet.cell(row=i, column=7).value))
             skill_badges_difference_milestone_4 = (milestone4_skill_badges-int(sheet.cell(row=i, column=8).value))
             if (quest_difference_milestone_4 < 1) and (skill_badges_difference_milestone_4 < 1) :
-                st.write("## **Congratulations! You have completed the Ultimate Milestone!! True Legend!!**")
+                st.write("## ```Congratulations! You have completed the Ultimate Milestone!! True Legend!!``` :heart_eyes:")
             else:
                 st.write(f"### You are **{quest_difference_milestone_4} Quests** and **{skill_badges_difference_milestone_4} Skill Badges** Away to Complete the Ultimate Milestone")
             flag = flag + 1
@@ -194,19 +194,19 @@ if selected == "Name":
             quest_difference_milestone_2 = (milestone2_quest - int(sheet.cell(row=i, column=7).value))
             skill_badges_difference_milestone_2 = (milestone2_skill_badges-int(sheet.cell(row=i, column=8).value))
             if (quest_difference_milestone_2 < 1) and (skill_badges_difference_milestone_2 < 1) :
-                st.write("## **Congratulations! You have completed the Second Milestone! On Fire!**")
+                st.write("## ```Congratulations! You have completed the Second Milestone! On Fire!``` :boom:")
             else:
                 st.write(f"### You are **{quest_difference_milestone_2} Quests** and **{skill_badges_difference_milestone_2} Skill Badges** Away to Complete the Second Milestone")
             quest_difference_milestone_3 = (milestone3_quest - int(sheet.cell(row=i, column=7).value))
             skill_badges_difference_milestone_3 = (milestone3_skill_badges-int(sheet.cell(row=i, column=8).value))
             if (quest_difference_milestone_3 < 1) and (skill_badges_difference_milestone_3 < 1) :
-                st.write("## **Congratulations! You have completed the Third Milestone! Unstoppable!**")
+                st.write("## ```Congratulations! You have completed the Third Milestone! Unstoppable!``` :star2:")
             else:
                 st.write(f"### You are **{quest_difference_milestone_3} Quests** and **{skill_badges_difference_milestone_3} Skill Badges** Away to Complete the Third Milestone")
             quest_difference_milestone_4 = (milestone4_quest - int(sheet.cell(row=i, column=7).value))
             skill_badges_difference_milestone_4 = (milestone4_skill_badges-int(sheet.cell(row=i, column=8).value))
             if (quest_difference_milestone_4 < 1) and (skill_badges_difference_milestone_4 < 1) :
-                st.write("## **Congratulations! You have completed the Ultimate Milestone!! True Legend!!**")
+                st.write("## ```Congratulations! You have completed the Ultimate Milestone!! True Legend!!``` :heart_eyes:")
             else:
                 st.write(f"### You are **{quest_difference_milestone_4} Quests** and **{skill_badges_difference_milestone_4} Skill Badges** Away to Complete the Ultimate Milestone")
             flag = flag + 1
@@ -235,19 +235,19 @@ if selected == "Email":
             quest_difference_milestone_2 = (milestone2_quest - int(sheet.cell(row=i, column=7).value))
             skill_badges_difference_milestone_2 = (milestone2_skill_badges-int(sheet.cell(row=i, column=8).value))
             if (quest_difference_milestone_2 < 1) and (skill_badges_difference_milestone_2 < 1) :
-                st.write("## **Congratulations! You have completed the Second Milestone! On Fire!**")
+                st.write("## ```Congratulations! You have completed the Second Milestone! On Fire!``` :boom:")
             else:
                 st.write(f"### You are **{quest_difference_milestone_2} Quests** and **{skill_badges_difference_milestone_2} Skill Badges** Away to Complete the Second Milestone")
             quest_difference_milestone_3 = (milestone3_quest - int(sheet.cell(row=i, column=7).value))
             skill_badges_difference_milestone_3 = (milestone3_skill_badges-int(sheet.cell(row=i, column=8).value))
             if (quest_difference_milestone_3 < 1) and (skill_badges_difference_milestone_3 < 1) :
-                st.write("## **Congratulations! You have completed the Third Milestone! Unstoppable!**")
+                st.write("## ```Congratulations! You have completed the Third Milestone! Unstoppable!``` :star2:")
             else:
                 st.write(f"### You are **{quest_difference_milestone_3} Quests** and **{skill_badges_difference_milestone_3} Skill Badges** Away to Complete the Third Milestone")
             quest_difference_milestone_4 = (milestone4_quest - int(sheet.cell(row=i, column=7).value))
             skill_badges_difference_milestone_4 = (milestone4_skill_badges-int(sheet.cell(row=i, column=8).value))
             if (quest_difference_milestone_4 < 1) and (skill_badges_difference_milestone_4 < 1) :
-                st.write("## **Congratulations! You have completed the Ultimate Milestone!! True Legend!!**")
+                st.write("## ```Congratulations! You have completed the Ultimate Milestone!! True Legend!!``` :heart_eyes:")
             else:
                 st.write(f"### You are **{quest_difference_milestone_4} Quests** and **{skill_badges_difference_milestone_4} Skill Badges** Away to Complete the Ultimate Milestone")
             flag = flag + 1
@@ -276,19 +276,19 @@ if selected == "Public Profile URL":
             quest_difference_milestone_2 = (milestone2_quest - int(sheet.cell(row=i, column=7).value))
             skill_badges_difference_milestone_2 = (milestone2_skill_badges-int(sheet.cell(row=i, column=8).value))
             if (quest_difference_milestone_2 < 1) and (skill_badges_difference_milestone_2 < 1) :
-                st.write("## **Congratulations! You have completed the Second Milestone! On Fire!**")
+                st.write("## ```Congratulations! You have completed the Second Milestone! On Fire!``` :boom:")
             else:
                 st.write(f"### You are **{quest_difference_milestone_2} Quests** and **{skill_badges_difference_milestone_2} Skill Badges** Away to Complete the Second Milestone")
             quest_difference_milestone_3 = (milestone3_quest - int(sheet.cell(row=i, column=7).value))
             skill_badges_difference_milestone_3 = (milestone3_skill_badges-int(sheet.cell(row=i, column=8).value))
             if (quest_difference_milestone_3 < 1) and (skill_badges_difference_milestone_3 < 1) :
-                st.write("## **Congratulations! You have completed the Third Milestone! Unstoppable!**")
+                st.write("## ```Congratulations! You have completed the Third Milestone! Unstoppable!``` :star2:")
             else:
                 st.write(f"### You are **{quest_difference_milestone_3} Quests** and **{skill_badges_difference_milestone_3} Skill Badges** Away to Complete the Third Milestone")
             quest_difference_milestone_4 = (milestone4_quest - int(sheet.cell(row=i, column=7).value))
             skill_badges_difference_milestone_4 = (milestone4_skill_badges-int(sheet.cell(row=i, column=8).value))
             if (quest_difference_milestone_4 < 1) and (skill_badges_difference_milestone_4 < 1) :
-                st.write("## **Congratulations! You have completed the Ultimate Milestone!! True Legend!!**")
+                st.write("## ```Congratulations! You have completed the Ultimate Milestone!! True Legend!!``` :heart_eyes:")
             else:
                 st.write(f"### You are **{quest_difference_milestone_4} Quests** and **{skill_badges_difference_milestone_4} Skill Badges** Away to Complete the Ultimate Milestone")
             flag = flag + 1
