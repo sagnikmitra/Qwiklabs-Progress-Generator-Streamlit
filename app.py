@@ -45,51 +45,51 @@ milestone4_skill_badges = 15
 #         st.table(df)
 
 selected = st.sidebar.selectbox(
-    "Search By", ("Default","Name", "Email", "Public Profile URL"))
+    "Search By", ("Default", "Email", "Public Profile URL"))
 
-page_name = ['Name','Email','Public Profile URL']
+page_name = ['Email','Public Profile URL']
 page = st.radio('Search By', page_name)
 
-if page == 'Name':
-    str = st.text_input('Enter You Qwiklabs Name')
-    for i in range(2, sheet.max_row+1):
-        if sheet.cell(row=i, column=1).value.lower() == str.lower():
-            st.write(f"## **Name:** {sheet.cell(row=i, column=1).value}")
-            st.write(f"## **Email Address:** {sheet.cell(row=i, column=2).value}")
-            st.write(f"## **Enrollment Status:** {sheet.cell(row=i, column=5).value}")
-            st.write("## **Qwiklabs Public URL:**")
-            st.write(sheet.cell(row=i, column=6).value)
-            st.write(f"## **No. Of Quests Completed:** {int(sheet.cell(row=i, column=7).value)}")
-            st.write(f"## **No. Of Skill Badges Completed:** {int(sheet.cell(row=i, column=8).value)}")
-            quest_difference_milestone_1 = (milestone1_quest - int(sheet.cell(row=i, column=7).value))
-            skill_badges_difference_milestone_1 = (milestone1_skill_badges-int(sheet.cell(row=i, column=8).value))
-            if (quest_difference_milestone_1 < 1) and (skill_badges_difference_milestone_1 < 1) :
-                st.write("## :fire: ```Congratulations! You have completed the First Milestone! On a Streak!``` :fire:")
-            else:
-                st.warning("You have not completed any of the Milestones. Start completing the amazing quests and skill badges to Kickstart your cloud journey and receive exciting gifts")
-                st.write(f"### You are **{quest_difference_milestone_1} Quests** and **{skill_badges_difference_milestone_1} Skill Badges** Away to Complete the First Milestone")
-            quest_difference_milestone_2 = (milestone2_quest - int(sheet.cell(row=i, column=7).value))
-            skill_badges_difference_milestone_2 = (milestone2_skill_badges-int(sheet.cell(row=i, column=8).value))
-            if (quest_difference_milestone_2 < 1) and (skill_badges_difference_milestone_2 < 1) :
-                st.write("## ```Congratulations! You have completed the Second Milestone! On Fire!``` :boom:")
-            else:
-                st.write(f"### You are **{quest_difference_milestone_2} Quests** and **{skill_badges_difference_milestone_2} Skill Badges** Away to Complete the Second Milestone")
-            quest_difference_milestone_3 = (milestone3_quest - int(sheet.cell(row=i, column=7).value))
-            skill_badges_difference_milestone_3 = (milestone3_skill_badges-int(sheet.cell(row=i, column=8).value))
-            if (quest_difference_milestone_3 < 1) and (skill_badges_difference_milestone_3 < 1) :
-                st.write("## ```Congratulations! You have completed the Third Milestone! Unstoppable!``` :star2:")
-            else:
-                st.write(f"### You are **{quest_difference_milestone_3} Quests** and **{skill_badges_difference_milestone_3} Skill Badges** Away to Complete the Third Milestone")
-            quest_difference_milestone_4 = (milestone4_quest - int(sheet.cell(row=i, column=7).value))
-            skill_badges_difference_milestone_4 = (milestone4_skill_badges-int(sheet.cell(row=i, column=8).value))
-            if (quest_difference_milestone_4 < 1) and (skill_badges_difference_milestone_4 < 1) :
-                st.write("## ```Congratulations! You have completed the Ultimate Milestone!! True Legend!!``` :heart_eyes:")
-            else:
-                st.write(f"### You are **{quest_difference_milestone_4} Quests** and **{skill_badges_difference_milestone_4} Skill Badges** Away to Complete the Ultimate Milestone")
-            flag = flag + 1
+# if page == 'Name':
+#     str = st.text_input('Enter You Qwiklabs Name')
+#     for i in range(2, sheet.max_row+1):
+#         if sheet.cell(row=i, column=1).value.lower() == str.lower():
+#             st.write(f"## **Name:** {sheet.cell(row=i, column=1).value}")
+#             st.write(f"## **Email Address:** {sheet.cell(row=i, column=2).value}")
+#             st.write(f"## **Enrollment Status:** {sheet.cell(row=i, column=5).value}")
+#             st.write("## **Qwiklabs Public URL:**")
+#             st.write(sheet.cell(row=i, column=6).value)
+#             st.write(f"## **No. Of Quests Completed:** {int(sheet.cell(row=i, column=7).value)}")
+#             st.write(f"## **No. Of Skill Badges Completed:** {int(sheet.cell(row=i, column=8).value)}")
+#             quest_difference_milestone_1 = (milestone1_quest - int(sheet.cell(row=i, column=7).value))
+#             skill_badges_difference_milestone_1 = (milestone1_skill_badges-int(sheet.cell(row=i, column=8).value))
+#             if (quest_difference_milestone_1 < 1) and (skill_badges_difference_milestone_1 < 1) :
+#                 st.write("## :fire: ```Congratulations! You have completed the First Milestone! On a Streak!``` :fire:")
+#             else:
+#                 st.warning("You have not completed any of the Milestones. Start completing the amazing quests and skill badges to Kickstart your cloud journey and receive exciting gifts")
+#                 st.write(f"### You are **{quest_difference_milestone_1} Quests** and **{skill_badges_difference_milestone_1} Skill Badges** Away to Complete the First Milestone")
+#             quest_difference_milestone_2 = (milestone2_quest - int(sheet.cell(row=i, column=7).value))
+#             skill_badges_difference_milestone_2 = (milestone2_skill_badges-int(sheet.cell(row=i, column=8).value))
+#             if (quest_difference_milestone_2 < 1) and (skill_badges_difference_milestone_2 < 1) :
+#                 st.write("## ```Congratulations! You have completed the Second Milestone! On Fire!``` :boom:")
+#             else:
+#                 st.write(f"### You are **{quest_difference_milestone_2} Quests** and **{skill_badges_difference_milestone_2} Skill Badges** Away to Complete the Second Milestone")
+#             quest_difference_milestone_3 = (milestone3_quest - int(sheet.cell(row=i, column=7).value))
+#             skill_badges_difference_milestone_3 = (milestone3_skill_badges-int(sheet.cell(row=i, column=8).value))
+#             if (quest_difference_milestone_3 < 1) and (skill_badges_difference_milestone_3 < 1) :
+#                 st.write("## ```Congratulations! You have completed the Third Milestone! Unstoppable!``` :star2:")
+#             else:
+#                 st.write(f"### You are **{quest_difference_milestone_3} Quests** and **{skill_badges_difference_milestone_3} Skill Badges** Away to Complete the Third Milestone")
+#             quest_difference_milestone_4 = (milestone4_quest - int(sheet.cell(row=i, column=7).value))
+#             skill_badges_difference_milestone_4 = (milestone4_skill_badges-int(sheet.cell(row=i, column=8).value))
+#             if (quest_difference_milestone_4 < 1) and (skill_badges_difference_milestone_4 < 1) :
+#                 st.write("## ```Congratulations! You have completed the Ultimate Milestone!! True Legend!!``` :heart_eyes:")
+#             else:
+#                 st.write(f"### You are **{quest_difference_milestone_4} Quests** and **{skill_badges_difference_milestone_4} Skill Badges** Away to Complete the Ultimate Milestone")
+#             flag = flag + 1
 
-    if flag == 0:
-        st.warning("No Search Found")
+#     if flag == 0:
+#         st.warning("No Search Found")
 
 if page == 'Email':
     str = st.text_input('Enter You Qwiklabs Email Id')
@@ -173,46 +173,46 @@ if page == 'Public Profile URL':
     if flag == 0:
         st.write("No Search Found")
 
-if selected == "Name":
-    str = st.text_input('Enter You Qwiklabs Name')
-    for i in range(2, sheet.max_row+1):
-        if sheet.cell(row=i, column=1).value.lower() == str.lower():
-            st.write(f"## **Name:** {sheet.cell(row=i, column=1).value}")
-            st.write(f"## **Email Address:** {sheet.cell(row=i, column=2).value}")
-            st.write(f"## **Enrollment Status:** {sheet.cell(row=i, column=5).value}")
-            st.write("## **Qwiklabs Public URL:**")
-            st.write(sheet.cell(row=i, column=6).value)
-            st.write(f"## **No. Of Quests Completed:** {int(sheet.cell(row=i, column=7).value)}")
-            st.write(f"## **No. Of Skill Badges Completed:** {int(sheet.cell(row=i, column=8).value)}")
-            quest_difference_milestone_1 = (milestone1_quest - int(sheet.cell(row=i, column=7).value))
-            skill_badges_difference_milestone_1 = (milestone1_skill_badges-int(sheet.cell(row=i, column=8).value))
-            if (quest_difference_milestone_1 < 1) and (skill_badges_difference_milestone_1 < 1) :
-                st.write("## :fire: ```Congratulations! You have completed the First Milestone! On a Streak!``` :fire:")
-            else:
-                st.warning("You have not completed any of the Milestones. Start completing the amazing quests and skill badges to Kickstart your cloud journey and receive exciting gifts")
-                st.write(f"### You are **{quest_difference_milestone_1} Quests** and **{skill_badges_difference_milestone_1} Skill Badges** Away to Complete the First Milestone")
-            quest_difference_milestone_2 = (milestone2_quest - int(sheet.cell(row=i, column=7).value))
-            skill_badges_difference_milestone_2 = (milestone2_skill_badges-int(sheet.cell(row=i, column=8).value))
-            if (quest_difference_milestone_2 < 1) and (skill_badges_difference_milestone_2 < 1) :
-                st.write("## ```Congratulations! You have completed the Second Milestone! On Fire!``` :boom:")
-            else:
-                st.write(f"### You are **{quest_difference_milestone_2} Quests** and **{skill_badges_difference_milestone_2} Skill Badges** Away to Complete the Second Milestone")
-            quest_difference_milestone_3 = (milestone3_quest - int(sheet.cell(row=i, column=7).value))
-            skill_badges_difference_milestone_3 = (milestone3_skill_badges-int(sheet.cell(row=i, column=8).value))
-            if (quest_difference_milestone_3 < 1) and (skill_badges_difference_milestone_3 < 1) :
-                st.write("## ```Congratulations! You have completed the Third Milestone! Unstoppable!``` :star2:")
-            else:
-                st.write(f"### You are **{quest_difference_milestone_3} Quests** and **{skill_badges_difference_milestone_3} Skill Badges** Away to Complete the Third Milestone")
-            quest_difference_milestone_4 = (milestone4_quest - int(sheet.cell(row=i, column=7).value))
-            skill_badges_difference_milestone_4 = (milestone4_skill_badges-int(sheet.cell(row=i, column=8).value))
-            if (quest_difference_milestone_4 < 1) and (skill_badges_difference_milestone_4 < 1) :
-                st.write("## ```Congratulations! You have completed the Ultimate Milestone!! True Legend!!``` :heart_eyes:")
-            else:
-                st.write(f"### You are **{quest_difference_milestone_4} Quests** and **{skill_badges_difference_milestone_4} Skill Badges** Away to Complete the Ultimate Milestone")
-            flag = flag + 1
+# if selected == "Name":
+#     str = st.text_input('Enter You Qwiklabs Name')
+#     for i in range(2, sheet.max_row+1):
+#         if sheet.cell(row=i, column=1).value.lower() == str.lower():
+#             st.write(f"## **Name:** {sheet.cell(row=i, column=1).value}")
+#             st.write(f"## **Email Address:** {sheet.cell(row=i, column=2).value}")
+#             st.write(f"## **Enrollment Status:** {sheet.cell(row=i, column=5).value}")
+#             st.write("## **Qwiklabs Public URL:**")
+#             st.write(sheet.cell(row=i, column=6).value)
+#             st.write(f"## **No. Of Quests Completed:** {int(sheet.cell(row=i, column=7).value)}")
+#             st.write(f"## **No. Of Skill Badges Completed:** {int(sheet.cell(row=i, column=8).value)}")
+#             quest_difference_milestone_1 = (milestone1_quest - int(sheet.cell(row=i, column=7).value))
+#             skill_badges_difference_milestone_1 = (milestone1_skill_badges-int(sheet.cell(row=i, column=8).value))
+#             if (quest_difference_milestone_1 < 1) and (skill_badges_difference_milestone_1 < 1) :
+#                 st.write("## :fire: ```Congratulations! You have completed the First Milestone! On a Streak!``` :fire:")
+#             else:
+#                 st.warning("You have not completed any of the Milestones. Start completing the amazing quests and skill badges to Kickstart your cloud journey and receive exciting gifts")
+#                 st.write(f"### You are **{quest_difference_milestone_1} Quests** and **{skill_badges_difference_milestone_1} Skill Badges** Away to Complete the First Milestone")
+#             quest_difference_milestone_2 = (milestone2_quest - int(sheet.cell(row=i, column=7).value))
+#             skill_badges_difference_milestone_2 = (milestone2_skill_badges-int(sheet.cell(row=i, column=8).value))
+#             if (quest_difference_milestone_2 < 1) and (skill_badges_difference_milestone_2 < 1) :
+#                 st.write("## ```Congratulations! You have completed the Second Milestone! On Fire!``` :boom:")
+#             else:
+#                 st.write(f"### You are **{quest_difference_milestone_2} Quests** and **{skill_badges_difference_milestone_2} Skill Badges** Away to Complete the Second Milestone")
+#             quest_difference_milestone_3 = (milestone3_quest - int(sheet.cell(row=i, column=7).value))
+#             skill_badges_difference_milestone_3 = (milestone3_skill_badges-int(sheet.cell(row=i, column=8).value))
+#             if (quest_difference_milestone_3 < 1) and (skill_badges_difference_milestone_3 < 1) :
+#                 st.write("## ```Congratulations! You have completed the Third Milestone! Unstoppable!``` :star2:")
+#             else:
+#                 st.write(f"### You are **{quest_difference_milestone_3} Quests** and **{skill_badges_difference_milestone_3} Skill Badges** Away to Complete the Third Milestone")
+#             quest_difference_milestone_4 = (milestone4_quest - int(sheet.cell(row=i, column=7).value))
+#             skill_badges_difference_milestone_4 = (milestone4_skill_badges-int(sheet.cell(row=i, column=8).value))
+#             if (quest_difference_milestone_4 < 1) and (skill_badges_difference_milestone_4 < 1) :
+#                 st.write("## ```Congratulations! You have completed the Ultimate Milestone!! True Legend!!``` :heart_eyes:")
+#             else:
+#                 st.write(f"### You are **{quest_difference_milestone_4} Quests** and **{skill_badges_difference_milestone_4} Skill Badges** Away to Complete the Ultimate Milestone")
+#             flag = flag + 1
 
-    if flag == 0:
-        st.write("No Search Found")
+    # if flag == 0:
+    #     st.write("No Search Found")
 
 if selected == "Email":
     str = st.text_input('Enter You Qwiklabs Email Id')
