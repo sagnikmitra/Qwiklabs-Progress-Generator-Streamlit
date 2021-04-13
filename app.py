@@ -171,7 +171,7 @@ if page == 'Email':
             flag = flag + 1
 
     if flag == 0:
-        st.write("No Search Found")
+        st.write("No Search Found for the entered Details")
 
 if page == 'Public Profile URL':
     str = st.text_input('Enter You Qwiklabs Public URL')
@@ -253,7 +253,7 @@ if page == 'Public Profile URL':
             flag = flag + 1
 
     if flag == 0:
-        st.write("No Search Found")
+        st.write("No Search Found for the entered Details")
 
 # if selected == "Name":
 #     str = st.text_input('Enter You Qwiklabs Name')
