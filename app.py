@@ -64,7 +64,7 @@ page = st.radio('Search By', page_name)
 #             quest_difference_milestone_1 = (milestone1_quest - int(sheet.cell(row=i, column=7).value))
 #             skill_badges_difference_milestone_1 = (milestone1_skill_badges-int(sheet.cell(row=i, column=8).value))
 #             if (quest_difference_milestone_1 < 1) and (skill_badges_difference_milestone_1 < 1) :
-#                 st.write("## :fire: ```Congratulations! You have completed the First Milestone! On a Streak!``` :fire:")
+#                 st.write("## ```Congratulations! You have completed the First Milestone! On a Streak!``` :fire:")
 #             else:
 #                 st.warning("You have not completed any of the Milestones. Start completing the amazing quests and skill badges to Kickstart your cloud journey and receive exciting gifts")
 #                 st.write(f"### You are **{quest_difference_milestone_1} Quests** and **{skill_badges_difference_milestone_1} Skill Badges** Away to Complete the First Milestone")
@@ -109,7 +109,7 @@ if page == 'Email':
             
             #Milestone 1
             if (quest_difference_milestone_1 < 1) and (skill_badges_difference_milestone_1 < 1) :
-                st.write("## :fire: ```Congratulations! You have completed the First Milestone! On a Streak!``` :fire:")
+                st.write("## ```Congratulations! You have completed the First Milestone! On a Streak!``` :fire:")
             else:
                 st.warning("You have not completed any of the Milestones. Start completing the amazing quests and skill badges to Kickstart your cloud journey and receive exciting gifts")
                 if (skill_badges_difference_milestone_1 > 0 and quest_difference_milestone_1 > 0):
@@ -191,7 +191,7 @@ if page == 'Public Profile URL':
             
             #Milestone 1
             if (quest_difference_milestone_1 < 1) and (skill_badges_difference_milestone_1 < 1) :
-                st.write("## :fire: ```Congratulations! You have completed the First Milestone! On a Streak!``` :fire:")
+                st.write("## ```Congratulations! You have completed the First Milestone! On a Streak!``` :fire:")
             else:
                 st.warning("You have not completed any of the Milestones. Start completing the amazing quests and skill badges to Kickstart your cloud journey and receive exciting gifts")
                 if (skill_badges_difference_milestone_1 > 0 and quest_difference_milestone_1 > 0):
@@ -269,7 +269,7 @@ if page == 'Public Profile URL':
 #             quest_difference_milestone_1 = (milestone1_quest - int(sheet.cell(row=i, column=7).value))
 #             skill_badges_difference_milestone_1 = (milestone1_skill_badges-int(sheet.cell(row=i, column=8).value))
 #             if (quest_difference_milestone_1 < 1) and (skill_badges_difference_milestone_1 < 1) :
-#                 st.write("## :fire: ```Congratulations! You have completed the First Milestone! On a Streak!``` :fire:")
+#                 st.write("## ```Congratulations! You have completed the First Milestone! On a Streak!``` :fire:")
 #             else:
 #                 st.warning("You have not completed any of the Milestones. Start completing the amazing quests and skill badges to Kickstart your cloud journey and receive exciting gifts")
 #                 st.write(f"### You are **{quest_difference_milestone_1} Quests** and **{skill_badges_difference_milestone_1} Skill Badges** Away to Complete the First Milestone")
@@ -310,7 +310,7 @@ if page == 'Public Profile URL':
 #             quest_difference_milestone_1 = (milestone1_quest - int(sheet.cell(row=i, column=7).value))
 #             skill_badges_difference_milestone_1 = (milestone1_skill_badges-int(sheet.cell(row=i, column=8).value))
 #             if (quest_difference_milestone_1 < 1) and (skill_badges_difference_milestone_1 < 1) :
-#                 st.write("## :fire: ```Congratulations! You have completed the First Milestone! On a Streak!``` :fire: :star_struck:")
+#                 st.write("## ```Congratulations! You have completed the First Milestone! On a Streak!``` :fire: :star_struck:")
 #             else:
 #                 st.warning("You have not completed any of the Milestones. Start completing the amazing quests and skill badges to Kickstart your cloud journey and receive exciting gifts")
 #                 st.write(f"### You are **{quest_difference_milestone_1} Quests** and **{skill_badges_difference_milestone_1} Skill Badges** Away to Complete the First Milestone")
@@ -351,7 +351,7 @@ if page == 'Public Profile URL':
 #             quest_difference_milestone_1 = (milestone1_quest - int(sheet.cell(row=i, column=7).value))
 #             skill_badges_difference_milestone_1 = (milestone1_skill_badges-int(sheet.cell(row=i, column=8).value))
 #             if (quest_difference_milestone_1 < 1) and (skill_badges_difference_milestone_1 < 1) :
-#                 st.write("## :fire: ```Congratulations! You have completed the First Milestone! On a Streak!``` :fire:")
+#                 st.write("## ```Congratulations! You have completed the First Milestone! On a Streak!``` :fire:")
 #             else:
 #                 st.warning("You have not completed any of the Milestones. Start completing the amazing quests and skill badges to Kickstart your cloud journey and receive exciting gifts")
 #                 st.write(f"### You are **{quest_difference_milestone_1} Quests** and **{skill_badges_difference_milestone_1} Skill Badges** Away to Complete the First Milestone")
