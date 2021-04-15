@@ -161,7 +161,7 @@ if page == 'Email':
                 st.write("## ```Congratulations! You have completed the Ultimate Milestone!! True Legend!!``` :heart_eyes:")
             else:
                 if (skill_badges_difference_milestone_4 > 0 and quest_difference_milestone_4 > 0):
-                    st.write(f"### You are **{quest_difference_milestone_3} Quests** and **{skill_badges_difference_milestone_3} Skill Badges** Away to Complete the Ultimate Milestone")
+                    st.write(f"### You are **{quest_difference_milestone_4} Quests** and **{skill_badges_difference_milestone_4} Skill Badges** Away to Complete the Ultimate Milestone")
                 else:
                     if (skill_badges_difference_milestone_4 > 0 and quest_difference_milestone_4 <= 0):
                         st.write(f"### You are **0 Quests** and **{skill_badges_difference_milestone_4} Skill Badges** Away to Complete the Ultimate Milestone")
