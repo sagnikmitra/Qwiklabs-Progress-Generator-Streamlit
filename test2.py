@@ -318,7 +318,10 @@ if page == "Generate Your Profile Badge":
     * According to your Milestone, your picture will be automatically applied with a badge
     * Right click on the Image and select save image as to Download the file
     * Then do share your badge on [Discord](https://bit.ly/crf-discord) and on your social media handles by tagging us as your Facilitator and Google Cloud India, also use `#GoogleCloudReady` tag. Google Cloud team closely monitor this tag :smile: :tada:
+    * Find the Video Tutorial Below:
     """)
+    st.write(" ")
+    st.video('https://www.youtube.com/watch?v=8m9hTYNPaK8')
     image_file = st.file_uploader("Upload Image", type=['jpg', 'png', 'jpeg'])
     if image_file is not None:
         size = (750, 750)
@@ -404,3 +407,4 @@ st.write("Deadline of the Program: 10th June 11.30PM ")
 st.write("#### This is a personal project and is not endorsed by Google LLC.")
 st.write(
     "#### Developed & Maintained by: **[Sagnik Mitra](https://linkedin.com/in/sagnikmitra/) & [Manish Kumar Barnwal](https://linkedin.com/in/imanishbarnwal/)** with :snake: & :heart:")
+# st.video('https://www.youtube.com/watch?v=Lf_tQWluHWA&t=10s')
