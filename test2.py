@@ -368,17 +368,20 @@ if page == "Milestone Achievers":
     ## **Achievers of Third Milestone**
     """)
     for i in range(0, len(list3)):
-        st.write(f"**{i+1}**: {list3[i]}")
+        if list3[i] not in list4:
+            st.write(f"**{i+1}**: {list3[i]}")
     st.write("""
     ## **Achievers of Second Milestone**
     """)
     for i in range(0, len(list2)):
-        st.write(f"**{i+1}**: {list2[i]}")
+        if list2[i] not in list3:
+            st.write(f"**{i+1}**: {list2[i]}")
     st.write("""
     ## **Achievers of First Milestone**
     """)
     for i in range(0, len(list1)):
-        st.write(f"**{i+1}**: {list1[i]}")
+        if list1[i] not in list2:
+            st.write(f"**{i+1}**: {list1[i]}")
 
 st.write(" ")
 st.write(" ")
