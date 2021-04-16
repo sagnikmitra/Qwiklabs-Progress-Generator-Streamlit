@@ -257,7 +257,7 @@ if page == 'Check Your Progress by Qwiklabs Public URL':
         st.write("No Search Found for the entered Details")
 if page == "Generate Your Profile Badge":
     st.write("""
-    # Generate your GCRF Avatar
+    ## **#GoogleCloudReady** Facilitator Program Badge
     """)
     flag = 0
     milestone1_quest = 8
@@ -312,8 +312,9 @@ if page == "Generate Your Profile Badge":
     * Click on Browse Files below to Upload an image
     * Upload a Square Image to get the best version of your Badge
     * If you upload a landscape or out of shape image, it would be resized to 1:1
-    * Right click on the Image and select save image as to Download the file
     * According to your Milestone, your picture will be automatically applied with a badge
+    * Right click on the Image and select save image as to Download the file
+    * Then share your Avatar on [Discord](https://bit.ly/crf-discord) and on your social media handles by tagging us as your Facilitator and Google Cloud India, also use `#GoogleCloudReady` tag. Google Cloud team closely monitor this tag :smile: :tada:
     """)
     image_file = st.file_uploader("Upload Image", type=['jpg', 'png', 'jpeg'])
     if image_file is not None:
