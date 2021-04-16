@@ -307,14 +307,14 @@ if page == "Generate Your Profile Badge":
 
     st.success(f"You're Currently on Milestone {miletry}")
     st.write(
-        "### **Instructions on Uploading your Image and Downloading the Avatar:**")
+        "### **Instructions on Uploading your Image and Downloading the Badge:**")
     st.write(f"""
     * Click on Browse Files below to Upload an image
     * Upload a Square Image to get the best version of your Badge
     * If you upload a landscape or out of shape image, it would be resized to 1:1
     * According to your Milestone, your picture will be automatically applied with a badge
     * Right click on the Image and select save image as to Download the file
-    * Then share your Avatar on [Discord](https://bit.ly/crf-discord) and on your social media handles by tagging us as your Facilitator and Google Cloud India, also use `#GoogleCloudReady` tag. Google Cloud team closely monitor this tag :smile: :tada:
+    * Then do share your badge on [Discord](https://bit.ly/crf-discord) and on your social media handles by tagging us as your Facilitator and Google Cloud India, also use `#GoogleCloudReady` tag. Google Cloud team closely monitor this tag :smile: :tada:
     """)
     image_file = st.file_uploader("Upload Image", type=['jpg', 'png', 'jpeg'])
     if image_file is not None:
