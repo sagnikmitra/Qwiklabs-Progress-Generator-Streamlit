@@ -28,10 +28,10 @@ milestone4_quest = 30
 milestone4_skill_badges = 15
 
 selected = st.sidebar.selectbox(
-    "Search By", ("Default", "Email", "Public Profile URL", "Generate Your Profile Badge"))
+    "Search By", ("Default", "Email", "Public Profile URL", "Generate Your Profile Badge", "Milestone Achievers"))
 
 page_name = ['Check Your Progress by Email Id',
-             'Check Your Progress by Qwiklabs Public URL', 'Generate Your Profile Badge']
+             'Check Your Progress by Qwiklabs Public URL', 'Generate Your Profile Badge', 'Milestone Achievers']
 page = st.radio('What you want to do today?', page_name)
 
 if page == 'Check Your Progress by Email Id':
@@ -331,55 +331,55 @@ if page == "Generate Your Profile Badge":
             img = Image.open("nomile.png").convert("RGBA")
         img = img.resize(size, Image.ANTIALIAS)
         card = Image.open(image_file)
-    # x, y = img.size
-    # size = (600,600)
+
         card = card.resize(size, Image.ANTIALIAS)
 
         card.paste(img, (0, 0), img)
         card.save("first.jpg", format="png")
         st.image(card)
-    # if image_file is not None:
-#     img1 = Image.open(image_file)
     miletry = 0
+if page == "Milestone Achievers":
+    list1 = []
+    list2 = []
+    list3 = []
+    list4 = []
+    for i in range(2, sheet.max_row + 1):
+        if sheet.cell(row=i, column=7).value >= milestone4_quest and sheet.cell(row=i, column=8).value >= milestone4_skill_badges:
+            list4.append(sheet.cell(row=i, column=1).value.title())
+        if sheet.cell(row=i, column=7).value >= milestone3_quest and sheet.cell(row=i, column=8).value >= milestone3_skill_badges:
+            list3.append(sheet.cell(row=i, column=1).value.title())
+        if sheet.cell(row=i, column=7).value >= milestone2_quest and sheet.cell(row=i, column=8).value >= milestone2_skill_badges:
+            list2.append(sheet.cell(row=i, column=1).value.title())
+        if sheet.cell(row=i, column=7).value >= milestone1_quest and sheet.cell(row=i, column=8).value >= milestone1_skill_badges:
+            list1.append(sheet.cell(row=i, column=1).value.title())
+    list1.sort()
+    list2.sort()
+    list3.sort()
+    list4.sort()
+    st.write("""
+    ## **Achievers of Ultimate Milestone**
+    """)
+    if (len(list4) == 0):
+        st.write("No one reached the Ultimate Milestone Yet.")
+    else:
+        for i in range(0, len(list4)):
+            st.write(f"**{i+1}**: {list4[i]}")
+    st.write("""
+    ## **Achievers of Third Milestone**
+    """)
+    for i in range(0, len(list3)):
+        st.write(f"**{i+1}**: {list3[i]}")
+    st.write("""
+    ## **Achievers of Second Milestone**
+    """)
+    for i in range(0, len(list2)):
+        st.write(f"**{i+1}**: {list2[i]}")
+    st.write("""
+    ## **Achievers of First Milestone**
+    """)
+    for i in range(0, len(list1)):
+        st.write(f"**{i+1}**: {list1[i]}")
 
-# for i in range(2, sheet.max_row+1):
-#     if sheet.cell(row=i, column=2).value.lower() == str.lower():
-#         quest_difference_milestone_1 = (milestone1_quest - int(sheet.cell(row=i, column=7).value))
-#         skill_badges_difference_milestone_1 = (milestone1_skill_badges-int(sheet.cell(row=i, column=8).value))
-#         quest_difference_milestone_2 = (milestone2_quest - int(sheet.cell(row=i, column=7).value))
-#         skill_badges_difference_milestone_2 = (milestone2_skill_badges-int(sheet.cell(row=i, column=8).value))
-#         quest_difference_milestone_3 = (milestone3_quest - int(sheet.cell(row=i, column=7).value))
-#         skill_badges_difference_milestone_3 = (milestone3_skill_badges-int(sheet.cell(row=i, column=8).value))
-#         quest_difference_milestone_4 = (milestone4_quest - int(sheet.cell(row=i, column=7).value))
-#         skill_badges_difference_milestone_4 = (milestone4_skill_badges-int(sheet.cell(row=i, column=8).value))
-
-#         if (quest_difference_milestone_1 < 1) and (skill_badges_difference_milestone_1 < 1) :
-#             miletry = 1
-#             break
-#         elif (quest_difference_milestone_2 < 1) and (skill_badges_difference_milestone_2 < 1) :
-#             miletry = 2
-#             break
-#         elif (quest_difference_milestone_3 < 1) and (skill_badges_difference_milestone_3 < 1) :
-#             miletry = 3
-#             break
-#         elif (quest_difference_milestone_4 < 1) and (skill_badges_difference_milestone_4 < 1) :
-#             miletry = 4
-#             break
-#         else:
-#             miletry = 0
-#             break
-# if(miletry == 1):
-#     img2 = Image.open(r"first.png")
-# if(miletry == 2):
-#     img2 = Image.open(r"second.png")
-# if(miletry == 3):
-#     img2 = Image.open(r"third.png")
-# if(miletry == 4):
-#     img2 = Image.open(r"ultimate.png")
-
-
-# Displaying the image
-# image_file.show()
 st.write(" ")
 st.write(" ")
 st.write(" ")
@@ -387,4 +387,4 @@ st.write(" ")
 st.write(" ")
 st.write("#### This is a personal project and is not endorsed by Google LLC.")
 st.write(
-    "#### Developed & Maintained by: **[Sagnik Mitra](https://linkedin.com/in/sagnikmitra/) & [Manish Kumar Barnwal](https://linkedin.com/in/imanishbarnwal/)** with :heart:")
+    "#### Developed & Maintained by: **[Sagnik Mitra](https://linkedin.com/in/sagnikmitra/) & [Manish Kumar Barnwal](https://linkedin.com/in/imanishbarnwal/)** with :snake: & :heart:")
