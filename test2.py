@@ -359,29 +359,37 @@ if page == "Milestone Achievers":
     st.write("""
     ## **Achievers of Ultimate Milestone**
     """)
+    listindex = 0
     if (len(list4) == 0):
         st.write("No one reached the Ultimate Milestone Yet.")
     else:
         for i in range(0, len(list4)):
-            st.write(f"**{i+1}**: {list4[i]}")
+            st.write(f"**{listindex+1}**: {list4[i]}")
+            listindex += 1
+    listindex = 0
     st.write("""
     ## **Achievers of Third Milestone**
     """)
     for i in range(0, len(list3)):
         if list3[i] not in list4:
-            st.write(f"**{i+1}**: {list3[i]}")
+            st.write(f"**{listindex+1}**: {list3[i]}")
+            listindex += 1
+    listindex = 0
     st.write("""
     ## **Achievers of Second Milestone**
     """)
     for i in range(0, len(list2)):
         if list2[i] not in list3:
-            st.write(f"**{i+1}**: {list2[i]}")
+            st.write(f"**{listindex+1}**: {list2[i]}")
+            listindex += 1
+    listindex = 0
     st.write("""
     ## **Achievers of First Milestone**
     """)
     for i in range(0, len(list1)):
         if list1[i] not in list2:
-            st.write(f"**{i+1}**: {list1[i]}")
+            st.write(f"**{listindex+1}**: {list1[i]}")
+            listindex += 1
 
 st.write(" ")
 st.write(" ")
