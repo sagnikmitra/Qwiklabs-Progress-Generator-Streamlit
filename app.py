@@ -321,7 +321,7 @@ if page == "Generate Your Profile Badge":
     * Find the Video Tutorial Below:
     """)
     st.write(" ")
-    st.video('https://www.youtube.com/watch?v=8m9hTYNPaK8')
+    st.video('https://youtu.be/t0MuMp-Q6xI')
     image_file = st.file_uploader("Upload Image", type=['jpg', 'png', 'jpeg'])
     if image_file is not None:
         size = (750, 750)
