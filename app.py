@@ -28,11 +28,11 @@ milestone4_quest = 30
 milestone4_skill_badges = 15
 
 selected = st.sidebar.selectbox(
-    "Search By", ("Default", "Email", "Public Profile URL", "Generate Your Profile Badge", "Milestone Achievers"))
+    "Search By", ("Default", "Email", "Public Profile URL", "Generate Your Profile Badge", "Milestone Achievers", "Syllabus"))
 
 page_name = ['Check Your Progress by Email Id',
              'Check Your Progress by Qwiklabs Public URL', 'Generate Your Profile Badge', 'Milestone Achievers']
-page = st.radio('What you want to do today?', page_name)
+page = st.radio('What do you want to do today?', page_name)
 
 if page == 'Check Your Progress by Email Id':
     str = st.text_input('Enter You Qwiklabs Email Id')
@@ -357,18 +357,18 @@ if page == "Milestone Achievers":
     list3.sort()
     list4.sort()
     st.write("""
-    ## **Achievers of Ultimate Milestone**
+    ### **Achievers of Ultimate Milestone :star:**
     """)
     listindex = 0
     if (len(list4) == 0):
-        st.write("No one reached the Ultimate Milestone Yet.")
+        st.info("No one reached the Ultimate Milestone yet.")
     else:
         for i in range(0, len(list4)):
             st.write(f"**{listindex+1}**: {list4[i]}")
             listindex += 1
     listindex = 0
     st.write("""
-    ## **Achievers of Third Milestone**
+    ### **Achievers of Third Milestone :three:**
     """)
     for i in range(0, len(list3)):
         if list3[i] not in list4:
@@ -376,7 +376,7 @@ if page == "Milestone Achievers":
             listindex += 1
     listindex = 0
     st.write("""
-    ## **Achievers of Second Milestone**
+    ### **Achievers of Second Milestone :two:**
     """)
     for i in range(0, len(list2)):
         if list2[i] not in list3:
@@ -384,7 +384,7 @@ if page == "Milestone Achievers":
             listindex += 1
     listindex = 0
     st.write("""
-    ## **Achievers of First Milestone**
+    ### **Achievers of First Milestone :one:**
     """)
     for i in range(0, len(list1)):
         if list1[i] not in list2:
@@ -395,7 +395,8 @@ st.write(" ")
 st.write(" ")
 st.write(" ")
 st.write(" ")
-st.write(" ")
+st.write("[Check your Qwiklabs Syllabus here](https://bitly/crf-syllabus)")
+st.write("Deadline of the Program: 10th June 11.30PM ")
 st.write("#### This is a personal project and is not endorsed by Google LLC.")
 st.write(
     "#### Developed & Maintained by: **[Sagnik Mitra](https://linkedin.com/in/sagnikmitra/) & [Manish Kumar Barnwal](https://linkedin.com/in/imanishbarnwal/)** with :snake: & :heart:")
