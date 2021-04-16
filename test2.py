@@ -13,10 +13,13 @@ from PIL import Image
 gc = pd.read_excel('gc.xlsx')
 exp = pxl.load_workbook('gc.xlsx')
 sheet = exp['Sister Nivedita University, Kol']
+
+
 st.write("""
-# Check your Qwiklabs Progress for GoogleCloudFacilitator Program 2021
+# Check your Qwiklabs Progress for GoogleCloudReady Facilitator Program
 ## Your Host: Sister Nivedita University
 """)
+st.image('crf21-rect-banner.png')
 flag = 0
 milestone1_quest = 8
 milestone1_skill_badges = 4
@@ -390,6 +393,7 @@ if page == "Milestone Achievers":
         if list1[i] not in list2:
             st.write(f"**{listindex+1}**: {list1[i]}")
             listindex += 1
+    st.image('gift.png')
 
 st.write(" ")
 st.write(" ")
