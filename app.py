@@ -409,13 +409,13 @@ st.write(
     "**Developed & Maintained by:** [Sagnik Mitra](https://linkedin.com/in/sagnikmitra/) & [Manish Kumar Barnwal](https://linkedin.com/in/imanishbarnwal/) with :snake: & :heart:")
 # st.video('https://www.youtube.com/watch?v=Lf_tQWluHWA&t=10s')
 
-import gspread 
-from oauth2client.service_account import ServiceAccountCredentials
+# import gspread 
+# from oauth2client.service_account import ServiceAccountCredentials
 
-scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
-credentials = ServiceAccountCredentials.from_json_keyfile_name('covidoff-ecef33b9fe0b.json', scope)
+# scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
+# credentials = ServiceAccountCredentials.from_json_keyfile_name('covidoff-ecef33b9fe0b.json', scope)
 
-gc = gspread.authorize(credentials)
-df = gc.open('covidoff-test-r').sheet1
+# gc = gspread.authorize(credentials)
+# df = gc.open('covidoff-test-r').sheet1
 
-st.write(df.get_all_records())
+# st.write(df.get_all_records())
