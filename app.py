@@ -402,7 +402,7 @@ st.write(" ")
 st.write(" ")
 st.write(" ")
 st.write(" ")
-st.write("[Check your Syllabus here](https://bitly/crf-syllabus)")
+st.write("[Check your Syllabus here](https://bit.ly/crf-syllabus)")
 st.write("**Deadline of the Program:** 10th June, 11:59 PM ")
 st.write("**This is a personal project and is not endorsed by Google LLC.**")
 st.write(
