@@ -351,9 +351,9 @@ if page == "Milestone Achievers":
     list4 = []
     for i in range(2, sheet.max_row + 1):
         if sheet.cell(row=i, column=7).value >= milestone4_quest and sheet.cell(row=i, column=8).value >= milestone4_skill_badges:
-            list4.append(sheet.cell(row=i, column=1).value.title())
+            list4.append(sheet.cell(row=i, column=1).value.title().split()[0])
         if sheet.cell(row=i, column=7).value >= milestone3_quest and sheet.cell(row=i, column=8).value >= milestone3_skill_badges:
-            list3.append(sheet.cell(row=i, column=1).value.title())
+            list3.append(sheet.cell(row=i, column=1).value.title().split()[0])
         if sheet.cell(row=i, column=7).value >= milestone2_quest and sheet.cell(row=i, column=8).value >= milestone2_skill_badges:
             list2.append(sheet.cell(row=i, column=1).value.title())
         if sheet.cell(row=i, column=7).value >= milestone1_quest and sheet.cell(row=i, column=8).value >= milestone1_skill_badges:
