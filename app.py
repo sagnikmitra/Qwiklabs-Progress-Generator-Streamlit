@@ -347,7 +347,7 @@ if page == "Generate Your Profile Badge":
 if page == "Milestone Achievers":
     str = st.text_input('Enter You Qwiklabs Email Id')
     for i in range(2, sheet.max_row+1):
-        if (sheet.cell(row=i, column=2).value.lower() == str.lower()) or (str.lower() == 'admingcrf'):
+        if sheet.cell(row=i, column=2).value.lower() == str.lower():
             list1 = []
             list2 = []
             list3 = []
