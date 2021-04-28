@@ -408,7 +408,7 @@ if page == "Milestone Achievers":
             flag = flag + 1
     if flag == 0:
         st.error(
-            "Sorry, we won't be able to show you the Milestone Achievers as you are not a Participant under GCRF Program Sister Nivedita University")
+            "Sorry, we won't be able to show you the Milestone Achievers unless and untill you are a Participant under GCRF Program Sister Nivedita University")
 
 st.write(" ")
 st.write(" ")
