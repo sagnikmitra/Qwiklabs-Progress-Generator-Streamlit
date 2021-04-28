@@ -355,9 +355,9 @@ if page == "Milestone Achievers":
         if sheet.cell(row=i, column=7).value >= milestone3_quest and sheet.cell(row=i, column=8).value >= milestone3_skill_badges:
             list3.append(sheet.cell(row=i, column=1).value.title().split()[0])
         if sheet.cell(row=i, column=7).value >= milestone2_quest and sheet.cell(row=i, column=8).value >= milestone2_skill_badges:
-            list2.append(sheet.cell(row=i, column=1).value.title())
+            list2.append(sheet.cell(row=i, column=1).value.title().split()[0])
         if sheet.cell(row=i, column=7).value >= milestone1_quest and sheet.cell(row=i, column=8).value >= milestone1_skill_badges:
-            list1.append(sheet.cell(row=i, column=1).value.title())
+            list1.append(sheet.cell(row=i, column=1).value.title().split()[0])
     list1.sort()
     list2.sort()
     list3.sort()
@@ -409,7 +409,7 @@ st.write(
     "**Developed & Maintained by:** [Sagnik Mitra](https://linkedin.com/in/sagnikmitra/) & [Manish Kumar Barnwal](https://linkedin.com/in/imanishbarnwal/) with :snake: & :heart:")
 # st.video('https://www.youtube.com/watch?v=Lf_tQWluHWA&t=10s')
 
-# import gspread 
+# import gspread
 # from oauth2client.service_account import ServiceAccountCredentials
 
 # scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
