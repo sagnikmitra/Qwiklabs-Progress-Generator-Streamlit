@@ -321,7 +321,7 @@ if page == "Generate Your Profile Badge":
     * Find the Video Tutorial Below:
     """)
     st.write(" ")
-    st.video('https://www.youtube.com/watch?v=8m9hTYNPaK8')
+    st.video('https://youtu.be/t0MuMp-Q6xI')
     image_file = st.file_uploader("Upload Image", type=['jpg', 'png', 'jpeg'])
     if image_file is not None:
         size = (750, 750)
@@ -402,9 +402,20 @@ st.write(" ")
 st.write(" ")
 st.write(" ")
 st.write(" ")
-st.write("[Check your Qwiklabs Syllabus here](https://bitly/crf-syllabus)")
-st.write("Deadline of the Program: 10th June 11.30PM ")
-st.write("#### This is a personal project and is not endorsed by Google LLC.")
+st.write("[Check your Syllabus here](https://bit.ly/crf-syllabus)")
+st.write("**Deadline of the Program:** 10th June, 11:59 PM ")
+st.write("**This is a personal project and is not endorsed by Google LLC.**")
 st.write(
-    "#### Developed & Maintained by: **[Sagnik Mitra](https://linkedin.com/in/sagnikmitra/) & [Manish Kumar Barnwal](https://linkedin.com/in/imanishbarnwal/)** with :snake: & :heart:")
+    "**Developed & Maintained by:** [Sagnik Mitra](https://linkedin.com/in/sagnikmitra/) & [Manish Kumar Barnwal](https://linkedin.com/in/imanishbarnwal/) with :snake: & :heart:")
 # st.video('https://www.youtube.com/watch?v=Lf_tQWluHWA&t=10s')
+
+# import gspread 
+# from oauth2client.service_account import ServiceAccountCredentials
+
+# scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
+# credentials = ServiceAccountCredentials.from_json_keyfile_name('covidoff-ecef33b9fe0b.json', scope)
+
+# gc = gspread.authorize(credentials)
+# df = gc.open('covidoff-test-r').sheet1
+
+# st.write(df.get_all_records())
