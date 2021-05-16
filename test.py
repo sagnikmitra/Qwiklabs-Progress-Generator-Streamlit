@@ -18,7 +18,7 @@ sheet['B533'] = 'admin'
 sheet['C533'] = 'Admin University'
 sheet['D533'] = 'Fri Apr 09 2021 23: 55: 50 GMT+0530 (India Standard Time)'
 sheet['E533'] = 'All Good'
-sheet['F533'] = 'https://sagnik.tech'
+sheet['F533'] = 'admin'
 sheet['G533'] = 30
 sheet['H533'] = 15
 
