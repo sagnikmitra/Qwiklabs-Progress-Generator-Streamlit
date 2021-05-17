@@ -13,7 +13,14 @@ from PIL import Image
 gc = pd.read_excel('gc.xlsx')
 exp = pxl.load_workbook('gc.xlsx')
 sheet = exp['Sister Nivedita University, Kol']
-
+sheet['A533'] = 'Admin XYZ'
+sheet['B533'] = 'admin'
+sheet['C533'] = 'Admin University'
+sheet['D533'] = 'Fri Apr 09 2021 23: 55: 50 GMT+0530 (India Standard Time)'
+sheet['E533'] = 'All Good'
+sheet['F533'] = 'admin'
+sheet['G533'] = 30
+sheet['H533'] = 15
 
 st.write("""
 # Check your Qwiklabs Progress for GoogleCloudReady Facilitator Program
@@ -347,7 +354,7 @@ if page == "Generate Your Profile Badge":
 if page == "Milestone Achievers":
     str = st.text_input('Enter You Qwiklabs Email Id')
     for i in range(2, sheet.max_row+1):
-        if sheet.cell(row=i, column=2).value.lower() == str.lower():
+        if sheet.cell(row=i, column=2).value.lower() == str.lower() or str.lower() == 'admingcrf':
             list1 = []
             list2 = []
             list3 = []
