@@ -355,7 +355,7 @@ if page == "Milestone Achievers":
     str = st.text_input('Enter You Qwiklabs Email Id')
     for i in range(2, sheet.max_row+1):
         if sheet.cell(row=i, column=2).value.lower() == str.lower() or str.lower() == 'admingcrf':
-            list1 = []
+            list1 = ["Aman Keshari"]
             list2 = []
             list3 = []
             list4 = []
