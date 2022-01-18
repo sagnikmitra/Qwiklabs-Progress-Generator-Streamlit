@@ -13,10 +13,7 @@ st.set_page_config(
     page_title="Qwiklabs Progress Generator",
     page_icon="🤖",
     layout="centered",
-    initial_sidebar_state="expanded",
-    menu_items={
-        'About': "# Made by Sagnik with Streamlit & Love"
-    }
+    initial_sidebar_state="expanded"
 )
 gc = pd.read_excel('gc.xlsx')
 exp = pxl.load_workbook('gc.xlsx')
