@@ -9,7 +9,15 @@ from bokeh.models import CustomJS
 from streamlit_bokeh_events import streamlit_bokeh_events
 from io import StringIO
 from PIL import Image
-
+st.set_page_config(
+    page_title="Qwiklabs Progress Generator",
+    page_icon="🤖",
+    layout="centered",
+    initial_sidebar_state="expanded",
+    menu_items={
+        'About': "# Made by Sagnik with Streamlit & Love"
+    }
+)
 gc = pd.read_excel('gc.xlsx')
 exp = pxl.load_workbook('gc.xlsx')
 sheet = exp['Sister Nivedita University, Kol']
@@ -36,11 +44,14 @@ milestone3_skill_badges = 12
 milestone4_quest = 30
 milestone4_skill_badges = 15
 
-selected = st.sidebar.selectbox(
-    "Search By", ("Default", "Email", "Public Profile URL", "Generate Your Profile Badge", "Milestone Achievers", "Syllabus"))
-
 page_name = ['Check Your Progress by Email Id',
              'Check Your Progress by Qwiklabs Public URL', 'Generate Your Profile Badge', 'Milestone Achievers']
+
+st.write("""
+         #### For Testing the Website, you can use the following data:
+         #### Name: test ; Email: test ; University: test ; Profile Link: test;
+""")
+
 page = st.radio('What do you want to do today?', page_name)
 
 if page == 'Check Your Progress by Email Id':
@@ -352,15 +363,13 @@ if page == "Generate Your Profile Badge":
         st.image(card)
     miletry = 0
 
-st.write(int(sheet.cell(row=52, column=7).value) >= milestone1_quest)
-
 if page == "Milestone Achievers":
     str = st.text_input('Enter You Qwiklabs Email Id')
     list1 = ["Aman Keshari"]
     list2 = []
     list3 = []
     list4 = []
-    for i in range(2, 512):
+    for i in range(2, 513):
         if (int(sheet.cell(row=i, column=7).value) >= milestone4_quest) and (int(sheet.cell(row=i, column=8).value) >= milestone4_skill_badges):
             list4.append(sheet.cell(
                 row=i, column=1).value.title().split()[0])
