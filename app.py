@@ -21,10 +21,9 @@ sheet['E533'] = 'All Good'
 sheet['F533'] = 'admin'
 sheet['G533'] = 30
 sheet['H533'] = 15
-
 st.write("""
 # Check your Qwiklabs Progress for GoogleCloudReady Facilitator Program
-## Your Host: Sister Nivedita University
+# Your Host: Sister Nivedita University
 """)
 st.image('crf21-rect-banner.png')
 flag = 0
@@ -46,8 +45,8 @@ page = st.radio('What do you want to do today?', page_name)
 
 if page == 'Check Your Progress by Email Id':
     str = st.text_input('Enter You Qwiklabs Email Id')
-    for i in range(2, sheet.max_row+1):
-        if sheet.cell(row=i, column=2).value.lower() == str.lower():
+    for i in range(2, sheet.max_row):
+        if sheet.cell(row=i, column=2).value == str:
             st.write(f"## **Name:** {sheet.cell(row=i, column=1).value}")
             st.write(
                 f"## **Email Address:** {sheet.cell(row=i, column=2).value}")
@@ -158,7 +157,7 @@ if page == 'Check Your Progress by Email Id':
 if page == 'Check Your Progress by Qwiklabs Public URL':
     str = st.text_input('Enter You Qwiklabs Public URL')
     for i in range(2, sheet.max_row+1):
-        if sheet.cell(row=i, column=6).value.lower() == str.lower():
+        if sheet.cell(row=i, column=6).value == str:
             st.write(f"## **Name:** {sheet.cell(row=i, column=1).value}")
             st.write(
                 f"## **Email Address:** {sheet.cell(row=i, column=2).value}")
@@ -267,7 +266,7 @@ if page == 'Check Your Progress by Qwiklabs Public URL':
         st.write("No Search Found for the entered Details")
 if page == "Generate Your Profile Badge":
     st.write("""
-    ## **#GoogleCloudReady** Facilitator Program Badge
+    # **#GoogleCloudReady** Facilitator Program Badge
     """)
     flag = 0
     milestone1_quest = 8
@@ -281,7 +280,7 @@ if page == "Generate Your Profile Badge":
     miletry = 0
     str = st.text_input('Enter You Qwiklabs Email Id')
     for i in range(2, sheet.max_row+1):
-        if sheet.cell(row=i, column=2).value.lower() == str.lower():
+        if sheet.cell(row=i, column=2).value == str:
             quest_difference_milestone_1 = (
                 milestone1_quest - int(sheet.cell(row=i, column=7).value))
             skill_badges_difference_milestone_1 = (
@@ -324,7 +323,8 @@ if page == "Generate Your Profile Badge":
     * If you upload a landscape or out of shape image, it would be resized to 1:1
     * According to your Milestone, your picture will be automatically applied with a badge
     * Right click on the Image and select save image as to Download the file
-    * Then do share your badge on [Discord](https://bit.ly/crf-discord) and on your social media handles by tagging us as your Facilitator and Google Cloud India, also use `#GoogleCloudReady` tag. Google Cloud team closely monitor this tag :smile: :tada:
+    #GoogleCloudReady` tag. Google Cloud team closely monitor this tag :smile: :tada:
+    * Then do share your badge on [Discord](https://bit.ly/crf-discord) and on your social media handles by tagging us as your Facilitator and Google Cloud India, also use `
     * Find the Video Tutorial Below:
     """)
     st.write(" ")
@@ -351,68 +351,69 @@ if page == "Generate Your Profile Badge":
         card.save("first.jpg", format="png")
         st.image(card)
     miletry = 0
+
+st.write(int(sheet.cell(row=52, column=7).value) >= milestone1_quest)
+
 if page == "Milestone Achievers":
     str = st.text_input('Enter You Qwiklabs Email Id')
-    for i in range(2, sheet.max_row+1):
-        if sheet.cell(row=i, column=2).value.lower() == str.lower() or str.lower() == 'admingcrf':
-            list1 = ["Aman Keshari"]
-            list2 = []
-            list3 = []
-            list4 = []
-            for i in range(2, sheet.max_row + 1):
-                if sheet.cell(row=i, column=7).value >= milestone4_quest and sheet.cell(row=i, column=8).value >= milestone4_skill_badges:
-                    list4.append(sheet.cell(
-                        row=i, column=1).value.title().split()[0])
-                if sheet.cell(row=i, column=7).value >= milestone3_quest and sheet.cell(row=i, column=8).value >= milestone3_skill_badges:
-                    list3.append(sheet.cell(
-                        row=i, column=1).value.title().split()[0])
-                if sheet.cell(row=i, column=7).value >= milestone2_quest and sheet.cell(row=i, column=8).value >= milestone2_skill_badges:
-                    list2.append(sheet.cell(
-                        row=i, column=1).value.title().split()[0])
-                if sheet.cell(row=i, column=7).value >= milestone1_quest and sheet.cell(row=i, column=8).value >= milestone1_skill_badges:
-                    list1.append(sheet.cell(
-                        row=i, column=1).value.title().split()[0])
-            list1.sort()
-            list2.sort()
-            list3.sort()
-            list4.sort()
-            st.write("""
-            ### **Achievers of Ultimate Milestone :star:**
-            """)
-            listindex = 0
-            if (len(list4) == 0):
-                st.info("No one reached the Ultimate Milestone yet.")
-            else:
-                for i in range(0, len(list4)):
-                    st.write(f"**{listindex+1}**: {list4[i]}")
-                    listindex += 1
-            listindex = 0
-            st.write("""
-            ### **Achievers of Third Milestone :three:**
-            """)
-            for i in range(0, len(list3)):
-                if list3[i] not in list4:
-                    st.write(f"**{listindex+1}**: {list3[i]}")
-                    listindex += 1
-            listindex = 0
-            st.write("""
-            ### **Achievers of Second Milestone :two:**
-            """)
-            for i in range(0, len(list2)):
-                if list2[i] not in list3:
-                    st.write(f"**{listindex+1}**: {list2[i]}")
-                    listindex += 1
-            listindex = 0
-            st.write("""
-            ### **Achievers of First Milestone :one:**
-            """)
-            for i in range(0, len(list1)):
-                if list1[i] not in list2:
-                    st.write(f"**{listindex+1}**: {list1[i]}")
-                    listindex += 1
-            st.image('gift.png')
+    list1 = ["Aman Keshari"]
+    list2 = []
+    list3 = []
+    list4 = []
+    for i in range(2, 512):
+        if (int(sheet.cell(row=i, column=7).value) >= milestone4_quest) and (int(sheet.cell(row=i, column=8).value) >= milestone4_skill_badges):
+            list4.append(sheet.cell(
+                row=i, column=1).value.title().split()[0])
+        if (int(sheet.cell(row=i, column=7).value) >= milestone3_quest) and (int(sheet.cell(row=i, column=8).value) >= milestone3_skill_badges):
+            list3.append(sheet.cell(
+                row=i, column=1).value.title().split()[0])
+        if (int(sheet.cell(row=i, column=7).value) >= milestone2_quest) and (int(sheet.cell(row=i, column=8).value) >= milestone2_skill_badges):
+            list2.append(sheet.cell(
+                row=i, column=1).value.title().split()[0])
+        if (int(sheet.cell(row=i, column=7).value) >= milestone1_quest) and (int(sheet.cell(row=i, column=8).value) >= milestone1_skill_badges):
+            list1.append(sheet.cell(
+                row=i, column=1).value.title().split()[0])
+        list1.sort()
+        list2.sort()
+        list3.sort()
+        list4.sort()
+    st.write("""
+    # **Achievers of Ultimate Milestone :star:**
+    """)
+    listindex = 0
+    if (len(list4) == 0):
+        st.info("No one reached the Ultimate Milestone yet.")
+    else:
+        for i in range(0, len(list4)):
+            st.write(f"**{listindex+1}**: {list4[i]}")
+            listindex += 1
+    listindex = 0
+    st.write("""
+    # **Achievers of Third Milestone :three:**
+    """)
+    for i in range(0, len(list3)):
+        if list3[i] not in list4:
+            st.write(f"**{listindex+1}**: {list3[i]}")
+            listindex += 1
+    listindex = 0
+    st.write("""
+    # **Achievers of Second Milestone :two:**
+    """)
+    for i in range(0, len(list2)):
+        if list2[i] not in list3:
+            st.write(f"**{listindex+1}**: {list2[i]}")
+            listindex += 1
+    listindex = 0
+    st.write("""
+    # **Achievers of First Milestone :one:**
+    """)
+    for i in range(0, len(list1)):
+        if list1[i] not in list2:
+            st.write(f"**{listindex+1}**: {list1[i]}")
+            listindex += 1
+    st.image('gift.png')
 
-            flag = flag + 1
+    flag = flag + 1
     if flag == 0:
         st.error(
             "Sorry, we won't be able to show you the Milestone Achievers unless and untill you are a Participant under GCRF Program Sister Nivedita University")
