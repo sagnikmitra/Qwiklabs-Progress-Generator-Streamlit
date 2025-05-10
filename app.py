@@ -350,10 +350,10 @@ if page == "Generate Your Profile Badge":
             img = Image.open("ultimate.png").convert("RGBA")
         elif miletry == 0:
             img = Image.open("nomile.png").convert("RGBA")
-        img = img.resize(size, Image.ANTIALIAS)
+        img = img.resize(size, Image.Resampling.LANCZOS)
         card = Image.open(image_file)
 
-        card = card.resize(size, Image.ANTIALIAS)
+        card = card.resize(size, Image.Resampling.LANCZOS)
 
         card.paste(img, (0, 0), img)
         card.save("first.jpg", format="png")
